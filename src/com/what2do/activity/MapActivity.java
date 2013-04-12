@@ -40,7 +40,8 @@ public class MapActivity extends FragmentActivity {
 		location.setLatitude(47.366667);
 		location.setLongitude(8.55);
 		
-		new Fetch_Foursquare_Data()
+		ParseFourSquareResponse parseFourSquareResponse = new ParseFourSquareResponse();
+		parseFourSquareResponse.getJSONStringAndParse(47.366667,8.55);
 
 		
     }

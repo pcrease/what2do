@@ -30,35 +30,9 @@ public class ParseFourSquareResponse {
 	private Venue_Dataset vd = new Venue_Dataset();
 	
 	public void getJSONStringAndParse(double lat, double lon) {
-
-		StringBuilder builder = new StringBuilder();
-		HttpClient client = new DefaultHttpClient();
-		HttpGet httpGet = new HttpGet(
-				"https://api.foursquare.com/v2/venues/search?ll="+lat+","+lon+"&section=bar&client_id=CK4ENMLHHV23P2QQNXOB2IWSMWF2MRYKBS5V2OXDPSSZYX2K&client_secret=YATORC45OMNLXNNZS3R0KIF0RT4VF1RQIO5FE23111VSMPAV&v=201220801&limit=5");
-		Log.d("url","https://api.foursquare.com/v2/venues/search?ll="+lat+","+lon+"&section=bar&client_id=CK4ENMLHHV23P2QQNXOB2IWSMWF2MRYKBS5V2OXDPSSZYX2K&client_secret=YATORC45OMNLXNNZS3R0KIF0RT4VF1RQIO5FE23111VSMPAV&v=201220801&limit=5");
-		try {
-			HttpResponse response = client.execute(httpGet);
-			StatusLine statusLine = response.getStatusLine();
-			int statusCode = statusLine.getStatusCode();
-			if (statusCode == 200) {
-				HttpEntity entity = response.getEntity();
-				InputStream content = entity.getContent();
-				BufferedReader reader = new BufferedReader(
-						new InputStreamReader(content));
-				String line;
-				while ((line = reader.readLine()) != null) {
-					builder.append(line);
-				}
-			} else {
-				Log.e("json", "Failed to download file");
-			}
-		} catch (ClientProtocolException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		buildVenueDataset(builder.toString());
-		Log.d("end",vd.getVenue_Data().size()+"");
+		
+		String url="https://api.foursquare.com/v2/venues/search?ll="+lat+","+lon+"&section=bar&client_id=CK4ENMLHHV23P2QQNXOB2IWSMWF2MRYKBS5V2OXDPSSZYX2K&client_secret=YATORC45OMNLXNNZS3R0KIF0RT4VF1RQIO5FE23111VSMPAV&v=201220801&limit=5";
+		new FourSquareFetchTask().execute(url);
 	}
 
 	
@@ -69,8 +43,6 @@ private void buildVenueDataset(String inputData) {
 			JSONArray venues = json.getJSONObject("response").getJSONArray("venues");
 			Log.d("number Of Venues", Integer.toString(venues.length()));
 
-			
-			
 			for (int i = 0; i < venues.length(); i++) {
 				Foursquare_Venue fourSquare_Venue = new Foursquare_Venue();	
 				JSONObject tempJson = venues.getJSONObject(i);
@@ -226,14 +198,22 @@ private void buildVenueDataset(String inputData) {
 	}
 
 	
-	public class FetchTask extends AsyncTask<Void, Void, JSONArray> {
-	    @Override
-	    protected JSONArray doInBackground(Void... params) {
-	    	StringBuilder builder = new StringBuilder();
+	public class FourSquareFetchTask extends AsyncTask<String, String, StringBuilder> {
+	    
+
+	    protected void onPostExecute(StringBuilder result) {
+	        if (result != null) {	        	
+	        	buildVenueDataset(result.toString());
+	        } else {
+	            // error occured
+	        }
+	    }
+
+		@Override
+		protected StringBuilder doInBackground(String... string) {
+			StringBuilder builder = new StringBuilder();
 			HttpClient client = new DefaultHttpClient();
-			HttpGet httpGet = new HttpGet(
-					"https://api.foursquare.com/v2/venues/search?ll="+lat+","+lon+"&section=bar&client_id=CK4ENMLHHV23P2QQNXOB2IWSMWF2MRYKBS5V2OXDPSSZYX2K&client_secret=YATORC45OMNLXNNZS3R0KIF0RT4VF1RQIO5FE23111VSMPAV&v=201220801&limit=5");
-			Log.d("url","https://api.foursquare.com/v2/venues/search?ll="+lat+","+lon+"&section=bar&client_id=CK4ENMLHHV23P2QQNXOB2IWSMWF2MRYKBS5V2OXDPSSZYX2K&client_secret=YATORC45OMNLXNNZS3R0KIF0RT4VF1RQIO5FE23111VSMPAV&v=201220801&limit=5");
+			HttpGet httpGet = new HttpGet(string[0]);
 			try {
 				HttpResponse response = client.execute(httpGet);
 				StatusLine statusLine = response.getStatusLine();
@@ -255,17 +235,8 @@ private void buildVenueDataset(String inputData) {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			buildVenueDataset(builder.toString());
-			Log.d("end",vd.getVenue_Data().size()+"");
-	    }
-
-	    @Override
-	    protected void onPostExecute(JSONArray result) {
-	        if (result != null) {
-	            // do something
-	        } else {
-	            // error occured
-	        }
-	    }
+						
+			return builder;
+		}
 	}
 }
