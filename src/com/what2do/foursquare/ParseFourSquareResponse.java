@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map.Entry;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -20,6 +22,8 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.google.android.maps.GeoPoint;
 
 
 import android.os.AsyncTask;
@@ -169,11 +173,12 @@ private void buildVenueDataset(String inputData) {
 
 	private void getLikesSpecialsHereNow(JSONObject input,
 			Foursquare_Venue fourSquare_Venue) throws JSONException {
-		JSONObject likes = input.getJSONObject("likes");
+		JSONObject likes = null;
+		if (input.has("likes")){likes = input.getJSONObject("likes");}
 		JSONObject specials = input.getJSONObject("specials");
 		JSONObject hereNow = input.getJSONObject("hereNow");
 
-		if (likes.has("count")) {
+		if (likes!=null&&likes.has("count")) {
 			//Log.d("count", likes.get("count").toString());
 			fourSquare_Venue.setCheckinCount(likes.getInt("count"));
 		}
@@ -204,6 +209,8 @@ private void buildVenueDataset(String inputData) {
 	    protected void onPostExecute(StringBuilder result) {
 	        if (result != null) {	        	
 	        	buildVenueDataset(result.toString());
+	        		        		    		
+	    		    
 	        } else {
 	            // error occured
 	        }
