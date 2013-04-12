@@ -6,6 +6,8 @@ import java.util.Map.Entry;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
@@ -16,17 +18,17 @@ import com.what2do.foursquare.Venue_Dataset;
 public class Map_Adaptor {
 
 	
-	private MapView mapView;
+	private GoogleMap mMap;
 	private List<Overlay> mapOverlays;
 	private double userLatitude;
 	private double userLongitude;
 	
-	public Map_Adaptor(MapView mapView){
-		this.mapView=mapView;
+	public Map_Adaptor(GoogleMap mMap){
+		this.mMap=mMap;
 	}
 	
 	public void drawFourSquareOverlay(Venue_Dataset vd,Drawable defaultMarker, Context context){
-		mapOverlays = mapView.getOverlays();
+		//mapOverlays = mMap.getOverlays();
 		FourSquareVenueOverlays fourSquareVenueOverlays = new FourSquareVenueOverlays(vd,defaultMarker, context);
                 
         Iterator<Entry<String, Foursquare_Venue>> it = vd.getVenue_Data().entrySet().iterator();
@@ -43,12 +45,14 @@ public class Map_Adaptor {
         }        
        
         mapOverlays.add(fourSquareVenueOverlays);
+        
+        
 	}
 	
 	public void drawUserLocation (Drawable defaultMarker, Context context){
 		String message="This is your current GPS location";
 		
-		mapOverlays = mapView.getOverlays();
+		//mapOverlays = mapView.getOverlays();
 		UserOverlay userOverlay = new UserOverlay(defaultMarker, context);
 		
 		        

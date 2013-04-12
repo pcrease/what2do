@@ -4,19 +4,25 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
 import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 
+import android.os.AsyncTask;
 import android.util.Log;
 
 public class ParseFourSquareResponse {
@@ -219,4 +225,47 @@ private void buildVenueDataset(String inputData) {
 		this.vd = vd;
 	}
 
+	
+	public class FetchTask extends AsyncTask<Void, Void, JSONArray> {
+	    @Override
+	    protected JSONArray doInBackground(Void... params) {
+	    	StringBuilder builder = new StringBuilder();
+			HttpClient client = new DefaultHttpClient();
+			HttpGet httpGet = new HttpGet(
+					"https://api.foursquare.com/v2/venues/search?ll="+lat+","+lon+"&section=bar&client_id=CK4ENMLHHV23P2QQNXOB2IWSMWF2MRYKBS5V2OXDPSSZYX2K&client_secret=YATORC45OMNLXNNZS3R0KIF0RT4VF1RQIO5FE23111VSMPAV&v=201220801&limit=5");
+			Log.d("url","https://api.foursquare.com/v2/venues/search?ll="+lat+","+lon+"&section=bar&client_id=CK4ENMLHHV23P2QQNXOB2IWSMWF2MRYKBS5V2OXDPSSZYX2K&client_secret=YATORC45OMNLXNNZS3R0KIF0RT4VF1RQIO5FE23111VSMPAV&v=201220801&limit=5");
+			try {
+				HttpResponse response = client.execute(httpGet);
+				StatusLine statusLine = response.getStatusLine();
+				int statusCode = statusLine.getStatusCode();
+				if (statusCode == 200) {
+					HttpEntity entity = response.getEntity();
+					InputStream content = entity.getContent();
+					BufferedReader reader = new BufferedReader(
+							new InputStreamReader(content));
+					String line;
+					while ((line = reader.readLine()) != null) {
+						builder.append(line);
+					}
+				} else {
+					Log.e("json", "Failed to download file");
+				}
+			} catch (ClientProtocolException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			buildVenueDataset(builder.toString());
+			Log.d("end",vd.getVenue_Data().size()+"");
+	    }
+
+	    @Override
+	    protected void onPostExecute(JSONArray result) {
+	        if (result != null) {
+	            // do something
+	        } else {
+	            // error occured
+	        }
+	    }
+	}
 }
