@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" >
+
+       <item android:id="@+id/searcharound"
+        android:icon="@drawable/ic_menu_search"
+        android:title="Search Around Me"/>
+       <item android:id="@+id/searchmap"
+        android:icon="@drawable/ic_menu_mapmode"
+        android:title="Search Current Map View"/>
+       <item android:id="@+id/searchmyplaces"
+        android:icon="@drawable/ic_menu_myplaces"
+        android:title="Search My Places"/>
+       <item android:id="@+id/searchlocality"
+        android:icon="@drawable/ic_menu_compass"
+        android:title="Search Locality"/>
+       <item android:id="@+id/editmyplaces"
+        android:icon="@drawable/ic_menu_archive"
+        android:title="Edit My Places"/>
+       <item android:id="@+id/settings"
+        android:icon="@drawable/ic_menu_agenda"
+        android:title="Settings"/>
+</menu>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="enCategories">
+        <item>Aquarium</item>
+        <item>Arcade</item>
+        <item>Art Gallery</item>
+        <item>Bowling Alley</item>
+        <item>Casino</item>
+        <item>Comedy Club</item>
+        <item>Concert Hall</item>
+        <item>General Entertainment</item>
+        <item>Historic Site</item>
+        <item>Movie Theater</item>
+        <item>Indie Movie Theater</item>
+        <item>Multiplex</item>
+        <item>Museum</item>
+        <item>Art Museum</item>
+        <item>History Museum</item>
+        <item>Planetarium</item>
+        <item>Science Museum</item>
+        <item>Music Venue</item>
+        <item>Jazz Club</item>
+        <item>Piano Bar</item>
+        <item>Rock Club</item>
+        <item>Performing Arts Venue</item>
+        <item>Dance Studio</item>
+        <item>Indie Theater</item>
+        <item>Opera House</item>
+        <item>Theater</item>
+        <item>Pool Hall</item>
+        <item>Racetrack</item>
+        <item>Stadium</item>
+        <item>Baseball Stadium</item>
+        <item>Basketball Stadium</item>
+        <item>Cricket Ground</item>
+        <item>Football Stadium</item>
+        <item>Hockey Arena</item>
+        <item>Soccer Stadium</item>
+        <item>Tennis</item>
+        <item>Track Stadium</item>
+        <item>Theme Park</item>
+        <item>Water Park</item>
+        <item>Zoo</item>
+        <item>General College and University</item>
+        <item>Law School</item>
+        <item>Medical School</item>
+        <item>Sorority House</item>
+        <item>Student Center</item>
+        <item>Trade School</item>
+        <item>University</item>
+        <item>Afghan Restaurants</item>
+        <item>African Restaurant</item>
+        <item>American Restaurant</item>
+        <item>Arepa Restaurant</item>
+        <item>Argentinian Restaurant</item>
+        <item>Asian Restaurant</item>
+        <item>Australian Restaurant</item>
+        <item>BBQ Joint</item>
+        <item>Bagel Shop</item>
+        <item>Bakery</item>
+        <item>Brazilian Restaurant</item>
+        <item>Breakfast Spot</item>
+        <item>Burger Joint</item>
+        <item>Burrito Place</item>
+        <item>CafÃ©</item>
+        <item>Cajun / Creole Restaurants</item>
+        <item>Caribbean Restaurant</item>
+        <item>Chinese Restaurant</item>
+        <item>Coffee Shop</item>
+        <item>Cuban Restaurant</item>
+        <item>Cupcake Shop</item>
+        <item>Delis / Bodegas</item>
+        <item>Dessert Shop</item>
+        <item>Dim Sum Restaurant</item>
+        <item>Diner</item>
+        <item>Distillery</item>
+        <item>Donut Shop</item>
+        <item>Dumpling Restaurant</item>
+        <item>Eastern European Restaurant</item>
+        <item>Ethiopian Restaurant</item>
+        <item>Falafel Restaurant</item>
+        <item>Fast Food Restaurant</item>
+        <item>Filipino Restaurant</item>
+        <item>Fish and Chips Shop</item>
+        <item>Food Truck</item>
+        <item>French Restaurant</item>
+        <item>Fried Chicken Joint</item>
+        <item>Gastropub</item>
+        <item>German Restaurant</item>
+        <item>Gluten-free Restaurant</item>
+        <item>Greek Restaurant</item>
+        <item>Hot Dog Joint</item>
+        <item>Ice Cream Shop</item>
+        <item>Indian Restaurant</item>
+        <item>Indonesian Restaurant</item>
+        <item>Italian Restaurant</item>
+        <item>Japanese Restaurant</item>
+        <item>Juice Bar</item>
+        <item>Korean Restaurant</item>
+        <item>Latin American Restaurant</item>
+        <item>Mac and Cheese Joint</item>
+        <item>Malaysian Restaurant</item>
+        <item>Mediterranean Restaurant</item>
+        <item>Mexican Restaurant</item>
+        <item>Middle Eastern Restaurant</item>
+        <item>Molecular Gastronomy Restaurant</item>
+        <item>Mongolian Restaurant</item>
+        <item>Moroccan Restaurant</item>
+        <item>New American Restaurant</item>
+        <item>Peruvian Restaurant</item>
+        <item>Pizza Place</item>
+        <item>Portuguese Restaurant</item>
+        <item>Ramen / Noodle House</item>
+        <item>Restaurant</item>
+        <item>Salad Place</item>
+        <item>Sandwich Place</item>
+        <item>Scandinavian Restaurant</item>
+        <item>Seafood Restaurant</item>
+        <item>Snack Place</item>
+        <item>Soup Place</item>
+        <item>South American Restaurant</item>
+        <item>Southern / Soul Food Restaurant</item>
+        <item>Spanish Restaurant</item>
+        <item>Paella Restaurant</item>
+        <item>Steakhouse</item>
+        <item>Sushi Restaurant</item>
+        <item>Swiss Restaurant</item>
+        <item>Taco Place</item>
+        <item>Tapas Restaurant</item>
+        <item>Tea Room</item>
+        <item>Thai Restaurant</item>
+        <item>Turkish Restaurant</item>
+        <item>Vegetarian / Vegan Restaurant</item>
+        <item>Vietnamese Restaurant</item>
+        <item>Winery</item>
+        <item>Wings Join</item>
+        <item>Animal Shelter</item>
+        <item>Auditorium</item>
+        <item>Building</item>
+        <item>Convention Center</item>
+        <item>Meeting Room</item>
+        <item>Event Space</item>
+        <item>Factory</item>
+        <item>Fair</item>
+        <item>Funeral Home</item>
+        <item>Government Building</item>
+        <item>Capitol Building</item>
+        <item>City Hall</item>
+        <item>Courthouse</item>
+        <item>Fire Station</item>
+        <item>Monument / Landmark</item>
+        <item>Police Station</item>
+        <item>Library</item>
+        <item>Medical Center</item>
+        <item>Dentist’s Office</item>
+        <item>Doctor’s Office</item>
+        <item>Emergency Room</item>
+        <item>Hospital</item>
+        <item>Laboratory</item>
+        <item>Optical Shop</item>
+        <item>Veterinarian</item>
+        <item>Military Base</item>
+        <item>Non-Profits</item>
+        <item>Office</item>
+        <item>Cafeteria</item>
+        <item>Campaign Offices</item>
+        <item>Conference Room</item>
+        <item>Coworking Space</item>
+        <item>Tech Startup</item>
+        <item>Parking</item>
+        <item>Post Office</item>
+        <item>Radio Stations</item>
+        <item>School</item>
+        <item>Elementary School</item>
+        <item>High School</item>
+        <item>Middle School</item>
+        <item>Music School</item>
+        <item>Nursery School</item>
+        <item>Spiritual Centers</item>
+        <item>Church</item>
+        <item>Mosque</item>
+        <item>Shrine</item>
+        <item>Synagogue</item>
+        <item>Temple</item>
+        <item>Voting Boot</item>
+        <item>Bar</item>
+        <item>Beer Garden</item>
+        <item>Cocktail Bar</item>
+        <item>Dive Bar</item>
+        <item>Gay Bar</item>
+        <item>Hookah Bar</item>
+        <item>Hotel Bar</item>
+        <item>Karaoke Bar</item>
+        <item>Lounge</item>
+        <item>Nightclub</item>
+        <item>Other Nightlife</item>
+        <item>Pub</item>
+        <item>Sake Bar</item>
+        <item>Speakeasy</item>
+        <item>Sports Bar</item>
+        <item>Strip Club</item>
+        <item>Whisky Bar</item>
+        <item>Wine B</item>
+        <item>Assisted Living</item>
+        <item>Home (private)</item>
+        <item>Housing Development</item>
+        <item>Residential Buildings (Apartments / Condo</item>
+        <item>Athletics and Sports</item>
+        <item>Baseball Field</item>
+        <item>Basketball Court</item>
+        <item>Golf Course</item>
+        <item>Hockey Field</item>
+        <item>Paintball Fields</item>
+        <item>Skate Park</item>
+        <item>Skating Rink</item>
+        <item>Soccer Field</item>
+        <item>Tennis Court</item>
+        <item>Volleyball Court</item>
+        <item>Beach</item>
+        <item>Surf Spot</item>
+        <item>Bridge</item>
+        <item>Campground</item>
+        <item>Cemetery</item>
+        <item>Dog Run</item>
+        <item>Farm</item>
+        <item>Field</item>
+        <item>Garden</item>
+        <item>Harbor / Marina</item>
+        <item>Hiking Trail</item>
+        <item>Hot Spring</item>
+        <item>Lake</item>
+        <item>Lighthouse</item>
+        <item>Mountain</item>
+        <item>Neighborhood</item>
+        <item>Other Great Outdoors</item>
+        <item>Park</item>
+        <item>Playground</item>
+        <item>Plaza</item>
+        <item>Pool</item>
+        <item>River</item>
+        <item>Rock Climbing Spots</item>
+        <item>Scenic Lookout</item>
+        <item>Sculpture Garden</item>
+        <item>Ski Area</item>
+        <item>Apres Ski Bar</item>
+        <item>Ski Chairlift</item>
+        <item>Ski Chalet</item>
+        <item>Ski Lodge</item>
+        <item>Ski Trail</item>
+        <item>Stable</item>
+        <item>Vineyard</item>
+        <item>Volcanos</item>
+        <item>Well</item>
+        <item>Antique Shop</item>
+        <item>Arts and Crafts Store</item>
+        <item>Automotive Shop</item>
+        <item>Bank</item>
+        <item>Bike Shop</item>
+        <item>Board Shop</item>
+        <item>Bookstore</item>
+        <item>Bridal Shop</item>
+        <item>Camera Store</item>
+        <item>Candy Store</item>
+        <item>Car Dealership</item>
+        <item>Car Wash</item>
+        <item>Clothing Store</item>
+        <item>Accessories Store</item>
+        <item>Boutique</item>
+        <item>Kids Store</item>
+        <item>Lingerie Store</item>
+        <item>Men’s Store</item>
+        <item>Shoe Store</item>
+        <item>Women’s Store</item>
+        <item>Convenience Store</item>
+        <item>Cosmetics Shop</item>
+        <item>Credit Unions</item>
+        <item>Daycare</item>
+        <item>Department Store</item>
+        <item>Design Studio</item>
+        <item>Drugstore / Pharmacy</item>
+        <item>EV Charging Stations</item>
+        <item>Electronics Store</item>
+        <item>Financial or Legal Services</item>
+        <item>Flea Market</item>
+        <item>Flower Shop</item>
+        <item>Food and Drink Shop</item>
+        <item>Brewery</item>
+        <item>Butcher</item>
+        <item>Cheese Shop</item>
+        <item>Farmers Market</item>
+        <item>Fish Market</item>
+        <item>Food Court</item>
+        <item>Gourmet Shop</item>
+        <item>Grocery Store</item>
+        <item>Liquor Store</item>
+        <item>Wine Shop</item>
+        <item>Furniture / Home Store</item>
+        <item>Gaming Cafe</item>
+        <item>Garden Center</item>
+        <item>Gas Station / Garage</item>
+        <item>Gift Shop</item>
+        <item>Gym / Fitness Center</item>
+        <item>Climbing Gyms</item>
+        <item>Gym Pool</item>
+        <item>Gym</item>
+        <item>Martial Arts Dojo</item>
+        <item>Track</item>
+        <item>Yoga Studio</item>
+        <item>Hardware Store</item>
+        <item>Hobby Shop</item>
+        <item>Internet Cafe</item>
+        <item>Jewelry Store</item>
+        <item>Laundry Service</item>
+        <item>Mall</item>
+        <item>Miscellaneous Shop</item>
+        <item>Mobile Phone Shop</item>
+        <item>Motorcycle Shops</item>
+        <item>Music Store</item>
+        <item>Nail Salon</item>
+        <item>Newsstand</item>
+        <item>Paper / Office Supplies Store</item>
+        <item>Pet Services</item>
+        <item>Pet Store</item>
+        <item>Photography Lab</item>
+        <item>Real Estate Offices</item>
+        <item>Record Shop</item>
+        <item>Recycling Facility</item>
+        <item>Salon / Barbershop</item>
+        <item>Smoke Shop</item>
+        <item>Spas / Massages</item>
+        <item>Sporting Goods Shop</item>
+        <item>Storage Facility</item>
+        <item>Tailor Shops</item>
+        <item>Tanning Salon</item>
+        <item>Tattoo Parlor</item>
+        <item>Thrift / Vintage Store</item>
+        <item>Toy / Game Store</item>
+        <item>Travel Agency</item>
+        <item>Video Game Store</item>
+        <item>Video Store</item>
+        <item>Airport</item>
+        <item>Airport Food Court</item>
+        <item>Airport Gate</item>
+        <item>Airport Lounge</item>
+        <item>Airport Terminal</item>
+        <item>Airport Tram</item>
+        <item>Plane</item>
+        <item>Bike Rental / Bike Share</item>
+        <item>Bus Station</item>
+        <item>Bus Line</item>
+        <item>Embassies / Consulates</item>
+        <item>Ferry</item>
+        <item>Boat or Ferry</item>
+        <item>Pier</item>
+        <item>General Travel</item>
+        <item>Hotel</item>
+        <item>Bed and Breakfast</item>
+        <item>Boarding House</item>
+        <item>Hostel</item>
+        <item>Hotel Pool</item>
+        <item>Motel</item>
+        <item>Resort</item>
+        <item>Roof Deck</item>
+        <item>Light Rail</item>
+        <item>Moving Target</item>
+        <item>Rental Car Location</item>
+        <item>Rest Area</item>
+        <item>Road</item>
+        <item>Subway</item>
+        <item>Taxi</item>
+        <item>Tourist Information Center</item>
+        <item>Train Station</item>
+        <item>Platform</item>
+        <item>Train</item>
+        <item>Travel Lounge</item>
+    </array>
+
+</resources>
