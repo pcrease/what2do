@@ -10,6 +10,7 @@
     android:background="#D9EFFF"
     tools:context=".SearchTypeActivity" >
     
+      
      <Button
         android:id="@+id/gps_search"
         android:layout_width="fill_parent"
