@@ -1,10 +1,100 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+<RelativeLayout
+    
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#000000"
     tools:context=".Time_Activity" >
+
+    <TextView
+        android:id="@+id/timeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="I Have 15 minutes"
+        android:textAppearance="@style/ButtonText" />
+    
+    <TextView
+        android:id="@+id/minTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:layout_below="@+id/timeDescription"
+        android:textAppearance="@style/smallButtonText"
+        android:layout_marginTop="20dp" />
+    
+    <TextView
+        android:id="@+id/maxTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="120"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/timeDescription"
+        android:textAppearance="@style/smallButtonText"
+        android:layout_marginTop="20dp" />
+
+    <SeekBar
+        android:id="@+id/timeBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/minTimeLabel"
+        android:layout_marginTop="5dp" />
+
+     <TextView
+        android:id="@+id/breakTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeBar"
+        android:layout_marginTop="20dp"
+        android:text="To......."
+        android:textAppearance="@style/ButtonText" />
+    <Button
+        android:id="@+id/Eat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/breakTo"
+        android:layout_marginTop="20dp"
+        style="@style/smallButtonText"
+        android:background="@layout/buttons"
+        android:text="EAT >>>" />
+    
+    <Button
+        android:id="@+id/Drink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Eat"
+        android:layout_marginTop="20dp"
+        style="@style/smallButtonText"
+        android:background="@layout/buttons"
+        android:text="DRINK >>>" />
+    <Button
+        android:id="@+id/Tour"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Drink"
+        android:layout_marginTop="20dp"
+        style="@style/smallButtonText"
+        android:background="@layout/buttons"
+        android:text="TOUR >>>" />
+     <Button
+        android:id="@+id/Wifi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Tour"
+        android:layout_marginTop="20dp"
+        style="@style/smallButtonText"
+        android:background="@layout/buttons"
+        android:text="FIND WIFI >>>" />
 </RelativeLayout>
+</ScrollView>

@@ -131,6 +131,10 @@ containing a value of this type.
          */
         public static final int zOrderOnTop=0x7f01000d;
     }
+    public static final class color {
+        public static final int darkMauve=0x7f090000;
+        public static final int lightMauve=0x7f090001;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -168,38 +172,49 @@ containing a value of this type.
         public static final int winetasting=0x7f020017;
     }
     public static final class id {
-        public static final int action_settings=0x7f040012;
+        public static final int Drink=0x7f040012;
+        public static final int Eat=0x7f040011;
+        public static final int Tour=0x7f040013;
+        public static final int Wifi=0x7f040014;
+        public static final int action_settings=0x7f04001b;
         public static final int address_search=0x7f040008;
-        public static final int editmyplaces=0x7f040010;
+        public static final int breakTo=0x7f040010;
+        public static final int editmyplaces=0x7f040019;
         public static final int goToNextScreen=0x7f04000b;
         public static final int gps_search=0x7f040007;
         public static final int hybrid=0x7f040004;
         public static final int map=0x7f040005;
         public static final int map_search=0x7f040009;
+        public static final int maxTimeLabel=0x7f04000e;
+        public static final int minTimeLabel=0x7f04000d;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int satellite=0x7f040002;
-        public static final int searcharound=0x7f04000c;
-        public static final int searchlocality=0x7f04000f;
-        public static final int searchmap=0x7f04000d;
-        public static final int searchmyplaces=0x7f04000e;
+        public static final int searcharound=0x7f040015;
+        public static final int searchlocality=0x7f040018;
+        public static final int searchmap=0x7f040016;
+        public static final int searchmyplaces=0x7f040017;
         public static final int select_location=0x7f040006;
         public static final int setmap=0x7f04000a;
-        public static final int settings=0x7f040011;
+        public static final int settings=0x7f04001a;
         public static final int terrain=0x7f040003;
+        public static final int timeBar=0x7f04000f;
+        public static final int timeDescription=0x7f04000c;
     }
     public static final class layout {
         public static final int activity_map=0x7f030000;
         public static final int activity_search_type=0x7f030001;
         public static final int activity_set_map=0x7f030002;
         public static final int activity_time_=0x7f030003;
-        public static final int buttons=0x7f030004;
+        public static final int background_gradient=0x7f030004;
+        public static final int button_pressed=0x7f030005;
+        public static final int buttons=0x7f030006;
     }
     public static final class menu {
-        public static final int map=0x7f090000;
-        public static final int search_type=0x7f090001;
-        public static final int set_map=0x7f090002;
-        public static final int time_=0x7f090003;
+        public static final int map=0x7f0a0000;
+        public static final int search_type=0x7f0a0001;
+        public static final int set_map=0x7f0a0002;
+        public static final int time_=0x7f0a0003;
     }
     public static final class string {
         public static final int action_settings=0x7f050012;
@@ -283,12 +298,13 @@ containing a value of this type.
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f080001;
+        public static final int AppBaseTheme=0x7f080002;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080002;
+        public static final int AppTheme=0x7f080003;
         public static final int ButtonText=0x7f080000;
+        public static final int smallButtonText=0x7f080001;
     }
     public static final class styleable {
         /** Attributes that can be used with a MapAttrs.

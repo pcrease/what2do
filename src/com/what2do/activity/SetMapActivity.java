@@ -53,13 +53,13 @@ public class SetMapActivity extends FragmentActivity {
                  .title("Search target")
                  .draggable(true)
                  .snippet("Hold finger on the marker and drag to move!"));
-            	 nextButton.setEnabled(true);
+            	 nextButton.setVisibility(View.VISIBLE);
             	 marker.showInfoWindow();
             }
        });
         
         nextButton = (Button) findViewById(R.id.goToNextScreen);
-        nextButton.setEnabled(false);
+        nextButton.setVisibility(View.GONE);
 		
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

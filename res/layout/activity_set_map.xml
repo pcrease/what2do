@@ -2,7 +2,8 @@
 <RelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
-  android:layout_height="match_parent">
+  android:layout_height="match_parent"
+  android:background="#000000">
   
 <fragment
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -18,7 +19,9 @@
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:layout_alignParentLeft="true"
+    style="@style/smallButtonText"
     android:text="Set Location (Map Center)"
+    android:background="@layout/buttons"
     android:visibility="visible" />
 
 <Button
@@ -28,7 +31,9 @@
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:layout_alignParentRight="true"
-    android:text="Next>>>"
+    style="@style/smallButtonText"
+    android:background="@layout/buttons"
+    android:text="Next >>>"
     android:visibility="visible" />
 
 </RelativeLayout>

@@ -32,7 +32,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.what2do.activity.MapActivity"
-            android:label="@string/title_activity_map" >
+            android:label="@string/title_activity_map" 
+            android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
         <meta-data
@@ -45,7 +46,8 @@
         </activity>
         <activity
             android:name="com.what2do.activity.SearchTypeActivity"
-            android:theme="@android:style/Theme.NoTitleBar" >
+            android:theme="@android:style/Theme.NoTitleBar"
+             android:label="search" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,7 +56,8 @@
         </activity>
         <activity
             android:name="com.what2do.activity.SetMapActivity"
-            android:label="@string/title_activity_set_map" >
+            android:label="@string/title_activity_set_map" 
+            android:theme="@android:style/Theme.NoTitleBar">
         </activity>
     </application>
 

@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    android:background="#D9EFFF"
+    android:background="#000000"
     tools:context=".SearchTypeActivity" >
     
       
@@ -18,7 +18,7 @@
         android:layout_weight="1"
         style="@style/ButtonText"
         android:background="@layout/buttons"
-        android:text="Search Around My GPS Location" />
+        android:text="Search With A GPS Location" />
 
     <Button
         android:id="@+id/address_search"
@@ -27,7 +27,7 @@
         android:layout_weight="1"
         style="@style/ButtonText"
         android:background="@layout/buttons"
-        android:text="Search Around An Address" />
+        android:text="Search With A Address" />
     
     <Button
         android:id="@+id/map_search"
@@ -36,6 +36,6 @@
         android:layout_weight="1"
         style="@style/ButtonText"
         android:background="@layout/buttons"
-        android:text="Search Within a Map View" />
+        android:text="Search With a Map View" />
 
 </LinearLayout>
