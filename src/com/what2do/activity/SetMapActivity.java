@@ -30,11 +30,14 @@ public class SetMapActivity extends FragmentActivity {
 
 	private GoogleMap mMap;
 	private Button setButton;
-	
+	private Button nextButton;
+	private FragmentActivity thisActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_map);
+        
+        thisActivity=this;
         
         mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.setmap)).getMap();
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
@@ -45,20 +48,26 @@ public class SetMapActivity extends FragmentActivity {
             public void onClick(View v) {
             	mMap.clear();
             	
-            	float zoomLevel=mMap.getCameraPosition().zoom;
-            	Log.e("aaa",""+zoomLevel);
-            	LatLng mapCenter= mMap.getCameraPosition().target;
             	 Marker marker = mMap.addMarker(new MarkerOptions()
                  .position(mMap.getCameraPosition().target)
                  .title("Search target")
                  .draggable(true)
                  .snippet("Hold finger on the marker and drag to move!"));
-            	 
+            	 nextButton.setEnabled(true);
             	 marker.showInfoWindow();
             }
        });
+        
+        nextButton = (Button) findViewById(R.id.goToNextScreen);
+        nextButton.setEnabled(false);
 		
-		
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	Intent intent = new Intent (thisActivity,Time_Activity.class);
+            	startActivity(intent);
+            }
+       });
+        
     }
     
     

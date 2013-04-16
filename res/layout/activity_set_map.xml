@@ -14,12 +14,21 @@
 
 <Button
     android:id="@+id/select_location"
-    android:layout_above="@+id/select_location"
-    android:layout_width="fill_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:text="Set Map Centre as Location"
+    android:layout_alignParentLeft="true"
+    android:text="Set Location (Map Center)"
+    android:visibility="visible" />
+
+<Button
+    android:id="@+id/goToNextScreen"
+    android:layout_toRightOf="@+id/select_location"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:text="Next>>>"
     android:visibility="visible" />
 
 </RelativeLayout>
