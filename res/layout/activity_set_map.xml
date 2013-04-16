@@ -6,7 +6,7 @@
   
 <fragment
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/map"
+    android:id="@+id/setmap"
     android:layout_above="@+id/select_location"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"

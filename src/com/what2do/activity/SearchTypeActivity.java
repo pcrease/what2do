@@ -2,31 +2,41 @@ package com.what2do.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.location.GpsStatus;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.AsyncTask;
+import android.location.LocationProvider;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.SystemClock;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
 import com.what2do.R;
-import com.what2do.foursquare.ParseFourSquareResponse.FourSquareFetchTask;
 
 public class SearchTypeActivity extends Activity {
 	
-	static Activity thisActivity;
-	boolean isSearchingForGpsFix;
-	static LocationManager manager;
-	GetGPSFixandProgress getGPSFixandProgress;
+	private static Activity thisActivity;
+	private static LocationManager manager;
+	private LocationListener locationListener;
+	 // The minimum distance to change Updates in meters
+    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10; // 10 meters
+ 
+    // The minimum time between updates in milliseconds
+    private static final long MIN_TIME_BW_UPDATES = 1000; // 1 minute
+    
+    private static Button gpsButton;
+    private static Button addressButton;
+    private static Button mapButton;
+    private static ProgressDialog waitingDialog;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,29 +44,57 @@ public class SearchTypeActivity extends Activity {
 		setContentView(R.layout.activity_search_type);
 		thisActivity=this;
 		
+		
 		manager= (LocationManager) getSystemService( Context.LOCATION_SERVICE );
 		
-		final Button gpsButton = (Button) findViewById(R.id.gps_search);
-		final Button addressButton = (Button) findViewById(R.id.address_search);
-		 
-		 Log.e("bbb","bbb");
-		 
+		gpsButton = (Button) findViewById(R.id.gps_search);
+		addressButton = (Button) findViewById(R.id.address_search);
+		mapButton = (Button) findViewById(R.id.map_search);
+	
+			
 		 
 		 gpsButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {                
-           	 Log.e("bbb","bbb");
-           	        	 
-           	 
-        	    	if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
-        	        buildAlertMessageNoGps();
-        	    	}
-	        	    
-        	    	else{ 	
-        	    		getGPSFixandProgress = new GetGPSFixandProgress();
-        	    		getGPSFixandProgress.run();
-        	    		getGPSFixandProgress.requestStop();
-	        	    		
-        	    	}    
+            public void onClick(View v) {  
+            	
+            	waitingDialog = ProgressDialog.show(thisActivity, "", 
+    	                "Searching for GPS fix. Please wait...", true);   	 
+            	waitingDialog.setCancelable(true);
+            	waitingDialog.setOnCancelListener(new OnCancelListener(){
+                   @Override
+                   public void onCancel(DialogInterface dialog){
+                	   if(waitingDialog!=null)waitingDialog.dismiss();
+               		if(locationListener!=null)manager.removeUpdates(locationListener);
+                }});           
+                
+            	 if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
+            	        buildAlertMessageNoGps();
+            	 }
+            	    	
+            	 locationListener = new LocationListener() {
+     				public void onLocationChanged(Location location) {
+     					Intent intent = new Intent(thisActivity, MapActivity.class);
+     			    	thisActivity.startActivity(intent);
+     			    	waitingDialog.dismiss();
+     				}
+
+     				public void onStatusChanged(String provider, int status,
+     						Bundle extras) {
+     					if (status == LocationProvider.AVAILABLE) {
+     						// droydMapComponent.layerEnable(LAYER_MY_LOCATION, true);
+     					}
+     				}
+
+     				public void onProviderEnabled(String provider) {
+     				}
+
+     				public void onProviderDisabled(String provider) {
+     				}
+     			};
+     			
+     			manager.requestLocationUpdates(
+                        LocationManager.GPS_PROVIDER,
+                        MIN_TIME_BW_UPDATES,
+                        MIN_DISTANCE_CHANGE_FOR_UPDATES, locationListener);
             }
         });
 		 
@@ -65,7 +103,13 @@ public class SearchTypeActivity extends Activity {
 	            public void onClick(View v) {                
 	            	Intent intent = new Intent(thisActivity, MapActivity.class);
 	    	    	thisActivity.startActivity(intent);}
-	        });
+	       });
+		 
+		 mapButton.setOnClickListener(new View.OnClickListener() {
+	            public void onClick(View v) {                
+	            	Intent intent = new Intent(thisActivity, SetMapActivity.class);
+	    	    	thisActivity.startActivity(intent);}
+	       });
         	
 		 
 		 
@@ -79,29 +123,57 @@ public class SearchTypeActivity extends Activity {
 		return true;
 	}
 
-	
+	@Override
 	protected void onStop() {
-		
-		getGPSFixandProgress.requestStop();
-		getGPSFixandProgress.interrupt();
-		getGPSFixandProgress=null;
 		super.onStop();
-	}
-	
-	protected void onDestroy() {
+		if(waitingDialog!=null)waitingDialog.dismiss();
+		if(locationListener!=null)manager.removeUpdates(locationListener);
+		Log.e("bbb","stopping");
 		
-		getGPSFixandProgress.requestStop();
-		getGPSFixandProgress.interrupt();
-		getGPSFixandProgress=null;
+		}
+	
+	@Override
+	protected void onDestroy() {
 		super.onDestroy();
+		if(waitingDialog!=null)waitingDialog.dismiss();
+		if(locationListener!=null)manager.removeUpdates(locationListener);
+		Log.e("bbb","destroying");
+		
+		
+		
+	}
+	@Override
+	protected void onPause() {
+		super.onPause(); 
+		if(waitingDialog!=null)waitingDialog.dismiss();
+		if(locationListener!=null)manager.removeUpdates(locationListener);
+		Log.e("bbb","pausing");
+		
 	}
 	
-	public void onPause() {
-	    super.onPause();  // Always call the superclass method first
-	    getGPSFixandProgress.requestStop();
-	    getGPSFixandProgress.interrupt();
-		getGPSFixandProgress=null;
+		
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event)  {
+		Log.e("bbb","down pressed");
+	    if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.ECLAIR
+	            && keyCode == KeyEvent.KEYCODE_BACK
+	            && event.getRepeatCount() == 0) {
+	    	if(waitingDialog!=null)waitingDialog.dismiss();
+			if(locationListener!=null)manager.removeUpdates(locationListener);
+	        onBackPressed();
+	    }
+
+	    return super.onKeyDown(keyCode, event);
 	}
+
+	@Override
+	public void onBackPressed() {
+		Log.e("bbb","down pressed");
+		if(waitingDialog!=null)waitingDialog.dismiss();
+		if(locationListener!=null)manager.removeUpdates(locationListener);
+	    return;
+	}
+	
 	
 	private void buildAlertMessageNoGps() {
 	    final AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -123,50 +195,7 @@ public class SearchTypeActivity extends Activity {
 	
 	
 	
-	private static boolean getGPSFix(LocationManager lm){
-		
-		   Location loc = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-		   // Get the time of the last fix
-		   if(loc==null)return false;
-		   long lastFixTimeMillis = loc.getTime(); 
-		   Log.e("bbb",Boolean.toString((SystemClock.elapsedRealtime() - lastFixTimeMillis) < 10000));
-		   return (SystemClock.elapsedRealtime() - lastFixTimeMillis) < 10000;
-	}
-
 	
-	
-	static public class GetGPSFixandProgress extends Thread {
-	   
-	    private volatile boolean stop = false;
-	    @Override
-	    public void run() {
-	    	if (this.interrupted()){
-	    	    return;
-	    	 }
-	      boolean hasFix=false;
-	    	while(!hasFix||!stop){
-	    		hasFix=getGPSFix(manager);
-	    		Log.e("bbb","here");
-	    		
-	    		try {
-					this.sleep(1000);
-					
-				} catch (InterruptedException e) {
-			        
-			        return;
-			    }
-	    	}
-	    	Intent intent = new Intent(thisActivity, MapActivity.class);
-	    	thisActivity.startActivity(intent);
-	    	
-	    }
-	    
-	    public synchronized void requestStop() {
-	    	Log.e("stopped","stop");
-			stop = true;
-		}
-	  }
 }
 
 

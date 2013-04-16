@@ -28,5 +28,14 @@
         style="@style/ButtonText"
         android:background="@layout/buttons"
         android:text="Search Around An Address" />
+    
+    <Button
+        android:id="@+id/map_search"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        style="@style/ButtonText"
+        android:background="@layout/buttons"
+        android:text="Search Within a Map View" />
 
 </LinearLayout>

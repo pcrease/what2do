@@ -45,11 +45,16 @@
         </activity>
         <activity
             android:name="com.what2do.activity.SearchTypeActivity"
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.what2do.activity.SetMapActivity"
+            android:label="@string/title_activity_set_map" >
         </activity>
     </application>
 
