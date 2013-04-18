@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>   
+    <array name="modeTravelList">
+        <item>Walk</item>
+        <item>Drive</item>
+        <item>Bike</item>
+        <item>Transit</item>
+    </array>
+</resources>

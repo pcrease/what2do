@@ -9,7 +9,9 @@ package com.what2do;
 
 public final class R {
     public static final class array {
-        public static final int enCategories=0x7f070000;
+        public static final int activityList=0x7f060000;
+        public static final int enCategories=0x7f060001;
+        public static final int modeTravelList=0x7f060002;
     }
     public static final class attr {
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
@@ -133,6 +135,7 @@ containing a value of this type.
     }
     public static final class color {
         public static final int darkMauve=0x7f090000;
+        public static final int lightBlue=0x7f090002;
         public static final int lightMauve=0x7f090001;
     }
     public static final class dimen {
@@ -142,8 +145,8 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f060000;
-        public static final int activity_vertical_margin=0x7f060001;
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
     }
     public static final class drawable {
         public static final int bar=0x7f020000;
@@ -172,49 +175,58 @@ containing a value of this type.
         public static final int winetasting=0x7f020017;
     }
     public static final class id {
-        public static final int Drink=0x7f040012;
-        public static final int Eat=0x7f040011;
-        public static final int Tour=0x7f040013;
-        public static final int Wifi=0x7f040014;
-        public static final int action_settings=0x7f04001b;
+        public static final int action_settings=0x7f04001d;
+        public static final int activityLayout=0x7f040012;
         public static final int address_search=0x7f040008;
-        public static final int breakTo=0x7f040010;
-        public static final int editmyplaces=0x7f040019;
+        public static final int breakTo=0x7f040011;
+        public static final int buttonLayout=0x7f040014;
+        public static final int editmyplaces=0x7f04001b;
         public static final int goToNextScreen=0x7f04000b;
         public static final int gps_search=0x7f040007;
         public static final int hybrid=0x7f040004;
         public static final int map=0x7f040005;
         public static final int map_search=0x7f040009;
-        public static final int maxTimeLabel=0x7f04000e;
-        public static final int minTimeLabel=0x7f04000d;
+        public static final int maxTimeLabel=0x7f04000f;
+        public static final int minTimeLabel=0x7f04000e;
+        public static final int modeList=0x7f040013;
+        public static final int moveFromTime=0x7f040015;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int satellite=0x7f040002;
-        public static final int searcharound=0x7f040015;
-        public static final int searchlocality=0x7f040018;
-        public static final int searchmap=0x7f040016;
-        public static final int searchmyplaces=0x7f040017;
+        public static final int searcharound=0x7f040017;
+        public static final int searchlocality=0x7f04001a;
+        public static final int searchmap=0x7f040018;
+        public static final int searchmyplaces=0x7f040019;
         public static final int select_location=0x7f040006;
         public static final int setmap=0x7f04000a;
-        public static final int settings=0x7f04001a;
+        public static final int settings=0x7f04001c;
         public static final int terrain=0x7f040003;
-        public static final int timeBar=0x7f04000f;
-        public static final int timeDescription=0x7f04000c;
+        public static final int timeBar=0x7f040010;
+        public static final int timeDescription=0x7f04000d;
+        public static final int timeLayout=0x7f04000c;
+        public static final int txtTitle=0x7f040016;
     }
     public static final class layout {
         public static final int activity_map=0x7f030000;
         public static final int activity_search_type=0x7f030001;
-        public static final int activity_set_map=0x7f030002;
-        public static final int activity_time_=0x7f030003;
-        public static final int background_gradient=0x7f030004;
-        public static final int button_pressed=0x7f030005;
-        public static final int buttons=0x7f030006;
+        public static final int activity_set_category=0x7f030002;
+        public static final int activity_set_map=0x7f030003;
+        public static final int activity_time_=0x7f030004;
+        public static final int background_gradient=0x7f030005;
+        public static final int button_pressed=0x7f030006;
+        public static final int buttons=0x7f030007;
+        public static final int list_selector=0x7f030008;
+        public static final int list_selector_focus=0x7f030009;
+        public static final int list_selector_press=0x7f03000a;
+        public static final int list_text=0x7f03000b;
+        public static final int listview_item_row=0x7f03000c;
     }
     public static final class menu {
         public static final int map=0x7f0a0000;
         public static final int search_type=0x7f0a0001;
-        public static final int set_map=0x7f0a0002;
-        public static final int time_=0x7f0a0003;
+        public static final int set_category=0x7f0a0002;
+        public static final int set_map=0x7f0a0003;
+        public static final int time_=0x7f0a0004;
     }
     public static final class string {
         public static final int action_settings=0x7f050012;
@@ -284,6 +296,7 @@ containing a value of this type.
         public static final int hello_world=0x7f050013;
         public static final int title_activity_map=0x7f050014;
         public static final int title_activity_search_type=0x7f050016;
+        public static final int title_activity_set_category=0x7f050018;
         public static final int title_activity_set_map=0x7f050017;
         public static final int title_activity_time_=0x7f050015;
     }
@@ -298,13 +311,14 @@ containing a value of this type.
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f080002;
+        public static final int AppBaseTheme=0x7f080003;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080003;
-        public static final int ButtonText=0x7f080000;
-        public static final int smallButtonText=0x7f080001;
+        public static final int AppTheme=0x7f080004;
+        public static final int ButtonText=0x7f080001;
+        public static final int ListFont=0x7f080000;
+        public static final int smallButtonText=0x7f080002;
     }
     public static final class styleable {
         /** Attributes that can be used with a MapAttrs.

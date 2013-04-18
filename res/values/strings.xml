@@ -21,7 +21,7 @@
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">2</item>
     </style>
-    
+
     <style name="smallButtonText">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -37,10 +37,11 @@
     </style>
 
     <string name="title_activity_set_map">SetMapActivity</string>
-	
-	<color name="darkMauve">#F6D8FF</color>
-	<color name="lightMauve">#F6D8FF</color>
-	
-	
+
+    <color name="darkMauve">#F6D8FF</color>
+    <color name="lightMauve">#F6D8FF</color>
+    <color name="lightBlue">#3fa2d4</color>
+
+    <string name="title_activity_set_category">SetCategoryActivity</string>
 
 </resources>
