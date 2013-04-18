@@ -166,13 +166,7 @@ public class SearchTypeActivity extends Activity {
 	    return super.onKeyDown(keyCode, event);
 	}
 
-	@Override
-	public void onBackPressed() {
-		Log.e("bbb","down pressed");
-		if(waitingDialog!=null)waitingDialog.dismiss();
-		if(locationListener!=null)manager.removeUpdates(locationListener);
-	    return;
-	}
+	
 	
 	
 	private void buildAlertMessageNoGps() {

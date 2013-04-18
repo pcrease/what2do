@@ -44,17 +44,12 @@
             android:name="com.what2do.activity.Time_Activity"
             android:label="@string/title_activity_time_"
             android:theme="@android:style/Theme.NoTitleBar" >
- >
+ >
         </activity>
         <activity
             android:name="com.what2do.activity.SearchTypeActivity"
             android:label="search"
             android:theme="@android:style/Theme.NoTitleBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.what2do.activity.SetMapActivity"
@@ -64,6 +59,20 @@
         <activity
             android:name="com.what2do.activity.SetCategoryActivity"
             android:label="@string/title_activity_set_category" >
+        </activity>
+        <activity
+            android:name="com.what2do.activity.DateActivity"
+            android:label="@string/title_activity_date" >
+        </activity>
+        <activity
+            android:name="com.what2do.activity.MainMenuActivity"
+            android:label="@string/title_activity_main_menu" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

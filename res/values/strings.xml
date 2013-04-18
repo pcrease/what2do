@@ -43,5 +43,7 @@
     <color name="lightBlue">#3fa2d4</color>
 
     <string name="title_activity_set_category">SetCategoryActivity</string>
+    <string name="title_activity_date">DateActivity</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
 
 </resources>
