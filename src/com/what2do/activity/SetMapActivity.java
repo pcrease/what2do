@@ -1,5 +1,6 @@
 package com.what2do.activity;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -40,7 +41,10 @@ public class SetMapActivity extends FragmentActivity {
         thisActivity=this;
         
         mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.setmap)).getMap();
-        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);       
+        
+        LatLng mapCenter= new LatLng(48.769604,9.175318);
+        mMap.animateCamera( CameraUpdateFactory.newLatLngZoom(mapCenter, 15.0f)); 
         
         setButton = (Button) findViewById(R.id.select_location);
         

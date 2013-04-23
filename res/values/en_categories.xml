@@ -2,6 +2,7 @@
 <resources>
 
     <array name="enCategories">
+        <item>WiFi</item>
         <item>Aquarium</item>
         <item>Arcade</item>
         <item>Art Gallery</item>
@@ -63,7 +64,7 @@
         <item>Breakfast Spot</item>
         <item>Burger Joint</item>
         <item>Burrito Place</item>
-        <item>CafÃ©</item>
+        <item>Cafe</item>
         <item>Cajun / Creole Restaurants</item>
         <item>Caribbean Restaurant</item>
         <item>Chinese Restaurant</item>

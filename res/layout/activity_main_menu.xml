@@ -21,10 +21,11 @@
         android:id="@+id/searchNow"
         style="@style/ButtonText"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:background="@layout/buttons"
+        android:layout_weight="1"
         android:text="Now !!!"
         android:visibility="visible" />
 
@@ -32,10 +33,11 @@
         android:id="@+id/searchLater"
         style="@style/ButtonText"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_margin="20dp"
         android:layout_marginTop="20dp"
         android:background="@layout/buttons"
+        android:layout_weight="1"
         android:text="A Bit Later..."
         android:visibility="visible" />
 

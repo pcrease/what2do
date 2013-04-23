@@ -10,7 +10,15 @@
     android:background="#000000"
     tools:context=".SearchTypeActivity" >
     
-      
+       <TextView
+        android:id="@+id/timeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Search Around...."
+        android:textAppearance="@style/ButtonText"
+         />
      <Button
         android:id="@+id/gps_search"
         android:layout_width="fill_parent"
@@ -18,7 +26,7 @@
         android:layout_weight="1"
         style="@style/ButtonText"
         android:background="@layout/buttons"
-        android:text="Search With A GPS Location" />
+        android:text="My GPS Location" />
 
     <Button
         android:id="@+id/address_search"
@@ -27,7 +35,7 @@
         android:layout_weight="1"
         style="@style/ButtonText"
         android:background="@layout/buttons"
-        android:text="Search With A Address" />
+        android:text="An Address" />
     
     <Button
         android:id="@+id/map_search"
@@ -36,6 +44,6 @@
         android:layout_weight="1"
         style="@style/ButtonText"
         android:background="@layout/buttons"
-        android:text="Search With a Map View" />
+        android:text="A Map View" />
 
 </LinearLayout>

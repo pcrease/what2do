@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>   
     <array name="activityList">
-        <item>Eat a Meal</item>
-        <item>Grab a Snack</item>
-        <item>Find a Drink</item>
-        <item>Take a Tour</item>
-        <item>Find Wifi</item>
+        <item>Eating</item>
+        <item>Drinking</item>
+        <item>Relaxing</item>
+        <item>Tourism</item>
     </array>
 </resources>

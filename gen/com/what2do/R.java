@@ -134,6 +134,7 @@ containing a value of this type.
         public static final int zOrderOnTop=0x7f01000d;
     }
     public static final class color {
+        public static final int darkBlue=0x7f090003;
         public static final int darkMauve=0x7f090000;
         public static final int lightBlue=0x7f090002;
         public static final int lightMauve=0x7f090001;
@@ -175,69 +176,90 @@ containing a value of this type.
         public static final int winetasting=0x7f020017;
     }
     public static final class id {
-        public static final int action_settings=0x7f04001e;
-        public static final int activityLayout=0x7f040019;
-        public static final int address_search=0x7f04000f;
-        public static final int breakTo=0x7f040018;
-        public static final int buttonLayout=0x7f04001b;
+        public static final int Activitybtn=0x7f04001a;
+        public static final int Keywordbtn=0x7f040019;
+        public static final int actList=0x7f04001e;
+        public static final int action_settings=0x7f04002f;
+        public static final int activityLayout=0x7f04001d;
+        public static final int addSearchTerm=0x7f040020;
+        public static final int addressAutoComplete=0x7f040009;
+        public static final int address_search=0x7f040016;
+        public static final int addressmap=0x7f04000d;
+        public static final int breakTo=0x7f040029;
+        public static final int buttonLayout=0x7f04002c;
+        public static final int catDescription=0x7f04001c;
         public static final int datePicker=0x7f040006;
-        public static final int editmyplaces=0x7f040023;
+        public static final int dividerLayout=0x7f04001b;
+        public static final int editmyplaces=0x7f040034;
+        public static final int goFromAddressGeocode=0x7f04000e;
         public static final int goFromDate=0x7f040008;
-        public static final int goToNextScreen=0x7f040012;
-        public static final int gps_search=0x7f04000e;
+        public static final int goToNextScreen=0x7f040024;
+        public static final int gps_search=0x7f040015;
         public static final int hybrid=0x7f040004;
-        public static final int introText=0x7f040009;
-        public static final int map=0x7f04000c;
-        public static final int map_search=0x7f040010;
-        public static final int maxTimeLabel=0x7f040016;
-        public static final int minTimeLabel=0x7f040015;
-        public static final int modeList=0x7f04001a;
-        public static final int moveFromTime=0x7f04001c;
+        public static final int introText=0x7f04000f;
+        public static final int keywordAutoComplete=0x7f04001f;
+        public static final int keywordLayout=0x7f040021;
+        public static final int map=0x7f040012;
+        public static final int mapButton=0x7f04000b;
+        public static final int map_search=0x7f040017;
+        public static final int maxTimeLabel=0x7f040027;
+        public static final int minTimeLabel=0x7f040026;
+        public static final int modeLayout=0x7f04002a;
+        public static final int modeList=0x7f04002b;
+        public static final int moveFromTime=0x7f04002d;
         public static final int none=0x7f040000;
         public static final int normal=0x7f040001;
         public static final int satellite=0x7f040002;
-        public static final int searchLater=0x7f04000b;
-        public static final int searchNow=0x7f04000a;
-        public static final int searcharound=0x7f04001f;
-        public static final int searchlocality=0x7f040022;
-        public static final int searchmap=0x7f040020;
-        public static final int searchmyplaces=0x7f040021;
-        public static final int select_location=0x7f04000d;
-        public static final int setmap=0x7f040011;
-        public static final int settings=0x7f040024;
+        public static final int searchLater=0x7f040011;
+        public static final int searchNow=0x7f040010;
+        public static final int searcharound=0x7f040030;
+        public static final int searchlocality=0x7f040033;
+        public static final int searchmap=0x7f040031;
+        public static final int searchmyplaces=0x7f040032;
+        public static final int select_location=0x7f040013;
+        public static final int setmap=0x7f040023;
+        public static final int settings=0x7f040035;
+        public static final int startSearch=0x7f040022;
+        public static final int tabLayout=0x7f040018;
         public static final int terrain=0x7f040003;
         public static final int textDateIntro=0x7f040005;
-        public static final int timeBar=0x7f040017;
+        public static final int textView1=0x7f04000c;
+        public static final int textView2=0x7f04000a;
+        public static final int timeBar=0x7f040028;
         public static final int timeDescription=0x7f040014;
-        public static final int timeLayout=0x7f040013;
+        public static final int timeLayout=0x7f040025;
         public static final int timePicker=0x7f040007;
-        public static final int txtTitle=0x7f04001d;
+        public static final int txtTitle=0x7f04002e;
     }
     public static final class layout {
         public static final int activity_date=0x7f030000;
-        public static final int activity_main_menu=0x7f030001;
-        public static final int activity_map=0x7f030002;
-        public static final int activity_search_type=0x7f030003;
-        public static final int activity_set_category=0x7f030004;
-        public static final int activity_set_map=0x7f030005;
-        public static final int activity_time_=0x7f030006;
-        public static final int background_gradient=0x7f030007;
-        public static final int button_pressed=0x7f030008;
-        public static final int buttons=0x7f030009;
-        public static final int list_selector=0x7f03000a;
-        public static final int list_selector_focus=0x7f03000b;
-        public static final int list_selector_press=0x7f03000c;
-        public static final int list_text=0x7f03000d;
-        public static final int listview_item_row=0x7f03000e;
+        public static final int activity_geo_code_=0x7f030001;
+        public static final int activity_main_menu=0x7f030002;
+        public static final int activity_map=0x7f030003;
+        public static final int activity_search_type=0x7f030004;
+        public static final int activity_set_category=0x7f030005;
+        public static final int activity_set_map=0x7f030006;
+        public static final int activity_time_=0x7f030007;
+        public static final int background_gradient=0x7f030008;
+        public static final int button_pressed=0x7f030009;
+        public static final int buttons=0x7f03000a;
+        public static final int keyword_items=0x7f03000b;
+        public static final int list_selector=0x7f03000c;
+        public static final int list_selector_focus=0x7f03000d;
+        public static final int list_selector_press=0x7f03000e;
+        public static final int list_text=0x7f03000f;
+        public static final int listview_item_row=0x7f030010;
+        public static final int tabs=0x7f030011;
     }
     public static final class menu {
         public static final int date=0x7f0a0000;
-        public static final int main_menu=0x7f0a0001;
-        public static final int map=0x7f0a0002;
-        public static final int search_type=0x7f0a0003;
-        public static final int set_category=0x7f0a0004;
-        public static final int set_map=0x7f0a0005;
-        public static final int time_=0x7f0a0006;
+        public static final int geo_code_=0x7f0a0001;
+        public static final int main_menu=0x7f0a0002;
+        public static final int map=0x7f0a0003;
+        public static final int search_type=0x7f0a0004;
+        public static final int set_category=0x7f0a0005;
+        public static final int set_map=0x7f0a0006;
+        public static final int time_=0x7f0a0007;
     }
     public static final class string {
         public static final int action_settings=0x7f050012;
@@ -304,8 +326,13 @@ containing a value of this type.
         find the service-side assets. [CHAR LIMIT=25] 
          */
         public static final int common_signin_button_text_long=0x7f05000d;
+        public static final int date_key=0x7f05001d;
         public static final int hello_world=0x7f050013;
+        public static final int location_key=0x7f05001b;
+        public static final int mode_key=0x7f05001e;
+        public static final int time_key=0x7f05001c;
         public static final int title_activity_date=0x7f050019;
+        public static final int title_activity_geo_code_=0x7f05001f;
         public static final int title_activity_main_menu=0x7f05001a;
         public static final int title_activity_map=0x7f050014;
         public static final int title_activity_search_type=0x7f050016;
@@ -324,12 +351,13 @@ containing a value of this type.
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f080003;
+        public static final int AppBaseTheme=0x7f080004;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080004;
+        public static final int AppTheme=0x7f080005;
         public static final int ButtonText=0x7f080001;
+        public static final int ButtonTextGreyGlow=0x7f080003;
         public static final int ListFont=0x7f080000;
         public static final int smallButtonText=0x7f080002;
     }

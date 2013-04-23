@@ -79,14 +79,14 @@ public class Time_Activity extends Activity {
 		        String selectedFromList =(String) (myAdapter.getItemAtPosition(myItemInt));
 		        if(selectedItem==null){
 		        	selectedItem=myItemInt;
-		        	myAdapter.getChildAt(myItemInt).setBackgroundColor(Color.parseColor("#2F6699"));
+		        	myAdapter.getChildAt(myItemInt).setBackgroundColor(Color.parseColor("#3fa2d4"));
 		        	goToNext.setVisibility(View.VISIBLE);
 		        	return;
 		        }
 		        else if(selectedItem!=myItemInt){
-		        myAdapter.getChildAt(selectedItem).setBackgroundColor(Color.parseColor("#3fa2d4"));
+		        myAdapter.getChildAt(selectedItem).setBackgroundColor(Color.parseColor("#2F6699"));
 		        selectedItem=myItemInt;
-		        myAdapter.getChildAt(myItemInt).setBackgroundColor(Color.parseColor("#2F6699"));
+		        myAdapter.getChildAt(myItemInt).setBackgroundColor(Color.parseColor("#3fa2d4"));
 		        
 		      	}		
 		        

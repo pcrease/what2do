@@ -101,7 +101,7 @@ public class SearchTypeActivity extends Activity {
 		 
 		 addressButton.setOnClickListener(new View.OnClickListener() {
 	            public void onClick(View v) {                
-	            	Intent intent = new Intent(thisActivity, MapActivity.class);
+	            	Intent intent = new Intent(thisActivity, GeoCode_Activity.class);
 	    	    	thisActivity.startActivity(intent);}
 	       });
 		 

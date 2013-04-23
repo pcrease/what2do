@@ -60,14 +60,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/timeBar"
         android:layout_marginTop="20dp"
-        android:text="Travelling By......"
+        android:text="And I Will......"
         android:textAppearance="@style/ButtonText" />
     
     
  </RelativeLayout>
 
 <LinearLayout
-    android:id="@+id/activityLayout"
+    android:id="@+id/modeLayout"
     android:layout_width="fill_parent"
     android:layout_height="0dp"
     android:layout_below="@+id/timeLayout"
@@ -81,7 +81,7 @@
             android:choiceMode="singleChoice"
             android:fadingEdge="vertical"
             android:fadingEdgeLength="10dp"
-            android:background="@color/lightBlue" >
+            android:background="@color/darkBlue" >
 
         </ListView>
 </LinearLayout>

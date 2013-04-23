@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000" >
+
+    <AutoCompleteTextView
+        android:id="@+id/addressAutoComplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/mapButton"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="10dp" >
+        <requestFocus>
+        </requestFocus>
+    </AutoCompleteTextView>
+    
+   <fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addressmap"
+    android:layout_below="@+id/addressAutoComplete"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    class="com.google.android.gms.maps.SupportMapFragment" />
+   
+   <Button
+    android:id="@+id/goFromAddressGeocode"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    style="@style/smallButtonText"
+    android:background="@layout/buttons"
+    android:text="Next >>>"
+    android:visibility="visible" />
+
+</RelativeLayout>
