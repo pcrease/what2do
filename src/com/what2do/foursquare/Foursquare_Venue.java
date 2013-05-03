@@ -3,6 +3,8 @@ package com.what2do.foursquare;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.what2do.route.JSON_Transit_GoogleDirection;
+
 
 public class Foursquare_Venue implements Cloneable {
 
@@ -31,10 +33,62 @@ public class Foursquare_Venue implements Cloneable {
 	private  int specials;
 	private  int hereNow;
 	
+	private int price;
+	
 	private  String url; 
 	private  String openingHours="";
+	private  String popularHours="";
 	
 	private  String menuURL = "";
+	
+	private double rating;
+	
+		
+	private double OverallHassle;//distance-changes-walking
+	private double OverallPopularity;//likes-checkins-tips
+	private double OverallContent;//photos-tips
+	private double OverallCombinedRelevance;//all in one!!!
+	
+	private int rankHassle;
+	private int rankPopularity;//likes-checkins-tips
+	private int rankContent;//photos-tips
+	private int rankCombinedRelevance;//all in one!!!
+	
+	private JSON_Transit_GoogleDirection jSON_Transit_GoogleDirection=new JSON_Transit_GoogleDirection();
+
+	
+	
+	public double getOverallHassle() {
+		return OverallHassle;
+	}
+
+	public void setOverallHassle(double overallHassle) {
+		OverallHassle = overallHassle;
+	}
+
+	public double getOverallPopularity() {
+		return OverallPopularity;
+	}
+
+	public void setOverallPopularity(double overallPopularity) {
+		OverallPopularity = overallPopularity;
+	}
+
+	public double getOverallContent() {
+		return OverallContent;
+	}
+
+	public void setOverallContent(double overallContent) {
+		OverallContent = overallContent;
+	}
+
+	public double getOverallCombinedRelevance() {
+		return OverallCombinedRelevance;
+	}
+
+	public void setOverallCombinedRelevance(double overallCombinedRelevance) {
+		OverallCombinedRelevance = overallCombinedRelevance;
+	}
 
 	public String getId() {
 		return id;
@@ -247,5 +301,74 @@ public class Foursquare_Venue implements Cloneable {
     {
             return null;
         }
-    } 
+    }
+
+	public double getRating() {
+		return rating;
+	}
+
+	public void setRating(double rating) {
+		this.rating = rating;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public String getPopularHours() {
+		return popularHours;
+	}
+
+	public void setPopularHours(String popularHours) {
+		this.popularHours = popularHours;
+	}
+
+	public JSON_Transit_GoogleDirection getjSON_Transit_GoogleDirection() {
+		return jSON_Transit_GoogleDirection;
+	}
+
+	public void setjSON_Transit_GoogleDirection(
+			JSON_Transit_GoogleDirection jSON_Transit_GoogleDirection) {
+		this.jSON_Transit_GoogleDirection = jSON_Transit_GoogleDirection;
+	}
+
+	public int getRankHassle() {
+		return rankHassle;
+	}
+
+	public void setRankHassle(int rankHassle) {
+		this.rankHassle = rankHassle;
+	}
+
+	public int getRankPopularity() {
+		return rankPopularity;
+	}
+
+	public void setRankPopularity(int rankPopularity) {
+		this.rankPopularity = rankPopularity;
+	}
+
+	public int getRankContent() {
+		return rankContent;
+	}
+
+	public void setRankContent(int rankContent) {
+		this.rankContent = rankContent;
+	}
+
+	public int getRankCombinedRelevance() {
+		return rankCombinedRelevance;
+	}
+
+	public void setRankCombinedRelevance(int rankCombinedRelevance) {
+		this.rankCombinedRelevance = rankCombinedRelevance;
+	}
+
+	
+
+	
 }

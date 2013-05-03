@@ -33,6 +33,7 @@ public class SetMapActivity extends FragmentActivity {
 	private Button setButton;
 	private Button nextButton;
 	private FragmentActivity thisActivity;
+	private Marker mMarker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,7 @@ public class SetMapActivity extends FragmentActivity {
         
         LatLng mapCenter= new LatLng(48.769604,9.175318);
         mMap.animateCamera( CameraUpdateFactory.newLatLngZoom(mapCenter, 15.0f)); 
+        mMap.getUiSettings().setZoomControlsEnabled(false);
         
         setButton = (Button) findViewById(R.id.select_location);
         
@@ -59,6 +61,8 @@ public class SetMapActivity extends FragmentActivity {
                  .snippet("Hold finger on the marker and drag to move!"));
             	 nextButton.setVisibility(View.VISIBLE);
             	 marker.showInfoWindow();
+            	 
+            	 mMarker=marker;
             }
        });
         
@@ -68,6 +72,11 @@ public class SetMapActivity extends FragmentActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	Intent intent = new Intent (thisActivity,Time_Activity.class);
+            	
+            	Bundle b=new Bundle();				
+				b.putDouble("lat", mMarker.getPosition().latitude);
+				b.putDouble("long", mMarker.getPosition().longitude);
+				intent.putExtras(b);
             	startActivity(intent);
             }
        });

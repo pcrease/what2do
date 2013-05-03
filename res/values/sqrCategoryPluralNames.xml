@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<array name="sqrCategoryPluralNames">
+<item>Arts and Entertainment</item>
+<item>Aquariums</item>
+<item>Arcades</item>
+<item>Art Galleries</item>
+<item>Bowling Alleys</item>
+<item>Casinos</item>
+<item>Comedy Clubs</item>
+<item>Concert Halls</item>
+<item>General Entertainment</item>
+<item>Historic Sites</item>
+<item>Movie Theaters</item>
+<item>Indie Movie Theaters</item>
+<item>Multiplexes</item>
+<item>Museums</item>
+<item>Art Museums</item>
+<item>History Museums</item>
+<item>Planetariums</item>
+<item>Science Museums</item>
+<item>Music Venues</item>
+<item>Jazz Clubs</item>
+<item>Piano Bars</item>
+<item>Rock Clubs</item>
+<item>Performing Arts Venues</item>
+<item>Dance Studios</item>
+<item>Indie Theaters</item>
+<item>Opera Houses</item>
+<item>Theaters</item>
+<item>Pool Halls</item>
+<item>Public Art</item>
+<item>Racetracks</item>
+<item>Stadiums</item>
+<item>Baseball Stadiums</item>
+<item>Basketball Stadiums</item>
+<item>Cricket Grounds</item>
+<item>Football Stadiums</item>
+<item>Hockey Arenas</item>
+<item>Soccer Stadiums</item>
+<item>Tennis Stadiums</item>
+<item>Track Stadiums</item>
+<item>Theme Parks</item>
+<item>Theme Park Rides/Attractions</item>
+<item>Water Parks</item>
+<item>Zoos</item>
+<item>Colleges and Universities</item>
+<item>College Academic Buildings</item>
+<item>College Arts Buildings</item>
+<item>College Communications Buildings</item>
+<item>College Engineering Buildings</item>
+<item>College History Buildings</item>
+<item>College Math Buildings</item>
+<item>College Science Buildings</item>
+<item>College Technology Buildings</item>
+<item>College Administrative Buildings</item>
+<item>College Auditoriums</item>
+<item>College Bookstores</item>
+<item>College Cafeterias</item>
+<item>College Classrooms</item>
+<item>College Gyms</item>
+<item>College Labs</item>
+<item>College Libraries</item>
+<item>College Quads</item>
+<item>College Rec Centers</item>
+<item>College Residence Halls</item>
+<item>College Stadiums</item>
+<item>College Baseball Diamonds</item>
+<item>College Basketball Courts</item>
+<item>College Cricket Pitches</item>
+<item>College Football Fields</item>
+<item>College Hockey Rinks</item>
+<item>College Soccer Fields</item>
+<item>College Tennis Courts</item>
+<item>College Tracks</item>
+<item>College Theaters</item>
+<item>Community Colleges</item>
+<item>Fraternity Houses</item>
+<item>General Colleges and Universities</item>
+<item>Law Schools</item>
+<item>Medical Schools</item>
+<item>Sorority Houses</item>
+<item>Student Centers</item>
+<item>Trade Schools</item>
+<item>Universities</item>
+<item>Food</item>
+<item>Afghan Restaurants</item>
+<item>African Restaurants</item>
+<item>American Restaurants</item>
+<item>Arepa Restaurants</item>
+<item>Argentinian Restaurants</item>
+<item>Asian Restaurants</item>
+<item>Australian Restaurants</item>
+<item>BBQ Joints</item>
+<item>Bagel Shops</item>
+<item>Bakeries</item>
+<item>Brazilian Restaurants</item>
+<item>Breakfast Spots</item>
+<item>Breweries</item>
+<item>Burger Joints</item>
+<item>Burrito Places</item>
+<item>Cafés</item>
+<item>Cajun / Creole Restaurants</item>
+<item>Caribbean Restaurants</item>
+<item>Chinese Restaurants</item>
+<item>Coffee Shops</item>
+<item>Cuban Restaurants</item>
+<item>Cupcake Shops</item>
+<item>Delis / Bodegas</item>
+<item>Dessert Shops</item>
+<item>Dim Sum Restaurants</item>
+<item>Diners</item>
+<item>Distillery</item>
+<item>Donut Shops</item>
+<item>Dumpling Restaurants</item>
+<item>Eastern European Restaurants</item>
+<item>Ethiopian Restaurants</item>
+<item>Falafel Restaurants</item>
+<item>Fast Food Restaurants</item>
+<item>Filipino Restaurants</item>
+<item>Fish and Chips Shops</item>
+<item>Food Trucks</item>
+<item>French Restaurants</item>
+<item>Fried Chicken Joints</item>
+<item>Gastropubs</item>
+<item>German Restaurants</item>
+<item>Gluten-free Restaurants</item>
+<item>Greek Restaurants</item>
+<item>Hot Dog Joints</item>
+<item>Ice Cream Shops</item>
+<item>Indian Restaurants</item>
+<item>Indonesian Restaurants</item>
+<item>Italian Restaurants</item>
+<item>Japanese Restaurants</item>
+<item>Juice Bars</item>
+<item>Korean Restaurants</item>
+<item>Latin American Restaurants</item>
+<item>Mac and Cheese Joints</item>
+<item>Malaysian Restaurants</item>
+<item>Mediterranean Restaurants</item>
+<item>Mexican Restaurants</item>
+<item>Middle Eastern Restaurants</item>
+<item>Molecular Gastronomy Restaurants</item>
+<item>Mongolian Restaurants</item>
+<item>Moroccan Restaurants</item>
+<item>New American Restaurants</item>
+<item>Peruvian Restaurants</item>
+<item>Pizza Places</item>
+<item>Portuguese Restaurants</item>
+<item>Ramen /  Noodle House</item>
+<item>Restaurants</item>
+<item>Salad Shop</item>
+<item>Sandwich Places</item>
+<item>Scandinavian Restaurants</item>
+<item>Seafood Restaurants</item>
+<item>Snack Places</item>
+<item>Soup Places</item>
+<item>South American Restaurants</item>
+<item>Southern / Soul Food Restaurants</item>
+<item>Spanish Restaurants</item>
+<item>Paella Restaurants</item>
+<item>Steakhouses</item>
+<item>Sushi Restaurants</item>
+<item>Swiss Restaurants</item>
+<item>Taco Places</item>
+<item>Tapas Restaurants</item>
+<item>Tea Rooms</item>
+<item>Thai Restaurants</item>
+<item>Turkish Restaurants</item>
+<item>Vegetarian / Vegan Restaurants</item>
+<item>Vietnamese Restaurants</item>
+<item>Wineries</item>
+<item>Wings Joints</item>
+<item>Yogurt</item>
+<item>Nightlife Spots</item>
+<item>Bars</item>
+<item>Beer Gardens</item>
+<item>Cocktail Bars</item>
+<item>Dive Bars</item>
+<item>Gay Bars</item>
+<item>Hookah Bars</item>
+<item>Hotel Bars</item>
+<item>Karaoke Bars</item>
+<item>Lounges</item>
+<item>Nightclubs</item>
+<item>Other Nightlife</item>
+<item>Pubs</item>
+<item>Sake Bars</item>
+<item>Speakeasies</item>
+<item>Sports Bars</item>
+<item>Strip Clubs</item>
+<item>Whisky Bars</item>
+<item>Wine Bars</item>
+<item>Outdoors and Recreation</item>
+<item>Athletics and Sports</item>
+<item>Baseball Fields</item>
+<item>Basketball Courts</item>
+<item>Golf Courses</item>
+<item>Hockey Fields</item>
+<item>Paintball Fields</item>
+<item>Skate Parks</item>
+<item>Skating Rinks</item>
+<item>Soccer Fields</item>
+<item>Tennis Courts</item>
+<item>Volleyball Courts</item>
+<item>Beaches</item>
+<item>Surf Spots</item>
+<item>Bridges</item>
+<item>Campgrounds</item>
+<item>Castles</item>
+<item>Cemeteries</item>
+<item>Cities</item>
+<item>Dog Runs</item>
+<item>Farms</item>
+<item>Fields</item>
+<item>Gardens</item>
+<item>Harbors / Marinas</item>
+<item>Hiking Trails</item>
+<item>Hot Springs</item>
+<item>Islands</item>
+<item>Lakes</item>
+<item>Lighthouses</item>
+<item>Mountains</item>
+<item>Neighborhoods</item>
+<item>Other Great Outdoors</item>
+<item>Parks</item>
+<item>Playgrounds</item>
+<item>Plazas</item>
+<item>Pools</item>
+<item>Rivers</item>
+<item>Rock Climbing Spots</item>
+<item>Scenic Lookouts</item>
+<item>Sculpture Gardens</item>
+<item>Ski Areas</item>
+<item>Apres Ski Bars</item>
+<item>Ski Chairlifts</item>
+<item>Ski Chalets</item>
+<item>Ski Lodges</item>
+<item>Ski Trails</item>
+<item>Stables</item>
+<item>Vineyards</item>
+<item>Volcanoes</item>
+<item>Wells</item>
+<item>Professional and Other Places</item>
+<item>Animal Shelters</item>
+<item>Auditoriums</item>
+<item>Buildings</item>
+<item>Convention Centers</item>
+<item>Meeting Rooms</item>
+<item>Event Spaces</item>
+<item>Factories</item>
+<item>Fairs</item>
+<item>Funeral Homes</item>
+<item>Government Buildings</item>
+<item>Capitol Buildings</item>
+<item>City Halls</item>
+<item>Courthouses</item>
+<item>Fire Stations</item>
+<item>Monuments / Landmarks</item>
+<item>Police Stations</item>
+<item>Libraries</item>
+<item>Medical Centers</item>
+<item>Dentists Offices</item>
+<item>Doctors Offices</item>
+<item>Emergency Rooms</item>
+<item>Hospitals</item>
+<item>Laboratories</item>
+<item>Optical Shops</item>
+<item>Veterinarians</item>
+<item>Military Bases</item>
+<item>Non-Profits</item>
+<item>Offices</item>
+<item>Cafeterias</item>
+<item>Campaign Offices</item>
+<item>Conference Rooms</item>
+<item>Coworking Spaces</item>
+<item>Tech Startups</item>
+<item>Parking</item>
+<item>Post Offices</item>
+<item>Radio Stations</item>
+<item>Schools</item>
+<item>Elementary Schools</item>
+<item>High Schools</item>
+<item>Middle Schools</item>
+<item>Music Schools</item>
+<item>Nursery Schools</item>
+<item>Spiritual Centers</item>
+<item>Churches</item>
+<item>Mosques</item>
+<item>Shrines</item>
+<item>Synagogues</item>
+<item>Temples</item>
+<item>Voting Booths</item>
+<item>Residences</item>
+<item>Assisted Living</item>
+<item>Homes (private)</item>
+<item>Housing Developments</item>
+<item>Residential Buildings (Apartments / Condos)</item>
+<item>Shops and Services</item>
+<item>Antique Shops</item>
+<item>Arts and Crafts Stores</item>
+<item>Automotive Shops</item>
+<item>Banks</item>
+<item>Bike Shops</item>
+<item>Board Shops</item>
+<item>Bookstores</item>
+<item>Bridal Shops</item>
+<item>Camera Stores</item>
+<item>Candy Stores</item>
+<item>Car Dealerships</item>
+<item>Car Wash</item>
+<item>Clothing Stores</item>
+<item>Accessories Stores</item>
+<item>Boutiques</item>
+<item>Kids Stores</item>
+<item>Lingerie Stores</item>
+<item>Mens Stores</item>
+<item>Shoe Stores</item>
+<item>Womens Stores</item>
+<item>Convenience Stores</item>
+<item>Cosmetics Shops</item>
+<item>Credit Unions</item>
+<item>Daycares</item>
+<item>Department Stores</item>
+<item>Design Studios</item>
+<item>Drugstores / Pharmacies</item>
+<item>EV Charging Stations</item>
+<item>Electronics Stores</item>
+<item>Financial or Legal Services</item>
+<item>Flea Markets</item>
+<item>Flower Shops</item>
+<item>Food and Drink Shops</item>
+<item>Butchers</item>
+<item>Cheese Shops</item>
+<item>Farmers Markets</item>
+<item>Fish Markets</item>
+<item>Food Courts</item>
+<item>Gourmet Shops</item>
+<item>Grocery Stores</item>
+<item>Health Food Stores</item>
+<item>Liquor Stores</item>
+<item>Wine Shops</item>
+<item>Furniture / Home Stores</item>
+<item>Gaming Cafes</item>
+<item>Garden Centers</item>
+<item>Gas Stations / Garages</item>
+<item>Gift Shops</item>
+<item>Gyms or Fitness Centers</item>
+<item>Climbing Gyms</item>
+<item>Gym Pools</item>
+<item>Gyms</item>
+<item>Martial Arts Dojos</item>
+<item>Tracks</item>
+<item>Yoga Studios</item>
+<item>Hardware Stores</item>
+<item>Hobby Shops</item>
+<item>Hunting Supplies</item>
+<item>Internet Cafes</item>
+<item>Jewelry Stores</item>
+<item>Laundry Services</item>
+<item>Malls</item>
+<item>Markets</item>
+<item>Miscellaneous Shops</item>
+<item>Mobile Phone Shops</item>
+<item>Motorcycle Shops</item>
+<item>Music Stores</item>
+<item>Nail Salons</item>
+<item>Newsstands</item>
+<item>Paper / Office Supplies Stores</item>
+<item>Pet Services</item>
+<item>Pet Stores</item>
+<item>Photography Labs</item>
+<item>Real Estate Offices</item>
+<item>Record Shops</item>
+<item>Recycling Facilities</item>
+<item>Salons / Barbershops</item>
+<item>Smoke Shops</item>
+<item>Spas / Massages</item>
+<item>Sporting Goods Shops</item>
+<item>Storage Facilities</item>
+<item>Tailor Shops</item>
+<item>Tanning Salons</item>
+<item>Tattoo Parlors</item>
+<item>Thrift / Vintage Stores</item>
+<item>Toy / Game Stores</item>
+<item>Travel Agencies</item>
+<item>Video Game Stores</item>
+<item>Video Stores</item>
+<item>Travel and Transport</item>
+<item>Airports</item>
+<item>Airport Food Court</item>
+<item>Airport Gates</item>
+<item>Airport Lounges</item>
+<item>Airport Terminals</item>
+<item>Airport Trams</item>
+<item>Planes</item>
+<item>Bike Rentals / Bike Shares</item>
+<item>Bus Stations</item>
+<item>Bus Lines</item>
+<item>Embassies / Consulates</item>
+<item>Ferries</item>
+<item>Boats or Ferries</item>
+<item>Pier</item>
+<item>General Travel</item>
+<item>Hotels</item>
+<item>Bed and Breakfasts</item>
+<item>Boarding Houses</item>
+<item>Hostels</item>
+<item>Hotel Pools</item>
+<item>Motels</item>
+<item>Resorts</item>
+<item>Roof Decks</item>
+<item>Light Rails</item>
+<item>Moving Targets</item>
+<item>Rental Car Locations</item>
+<item>Rest Areas</item>
+<item>Roads</item>
+<item>Subways</item>
+<item>Taxis</item>
+<item>Tourist Information Centers</item>
+<item>Train Stations</item>
+<item>Platforms</item>
+<item>Trains</item>
+<item>Travel Lounges</item>
+</array>
+</resources>

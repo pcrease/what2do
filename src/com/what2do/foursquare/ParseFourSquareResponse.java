@@ -40,7 +40,7 @@ public class ParseFourSquareResponse {
 	}
 
 	
-private void buildVenueDataset(String inputData) {
+	private void buildVenueDataset(String inputData) {
 		
 		try {
 			JSONObject json = new JSONObject(inputData);

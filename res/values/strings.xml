@@ -65,5 +65,6 @@
     <string name="date_key">date_key</string>
     <string name="mode_key">mode_key</string>
     <string name="title_activity_geo_code_">GeoCode_Activity</string>
+    <string name="title_activity_map_results">MapResultsActivity</string>
 
 </resources>

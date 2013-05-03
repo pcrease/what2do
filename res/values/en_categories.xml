@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <array name="enCategories">
-        <item>WiFi</item>
+    <array name="enShortCategories">
+        <item>Wifi</item>
         <item>Aquarium</item>
         <item>Arcade</item>
         <item>Art Gallery</item>
@@ -58,32 +57,34 @@
         <item>Asian Restaurant</item>
         <item>Australian Restaurant</item>
         <item>BBQ Joint</item>
-        <item>Bagel Shop</item>
+        <item>Bagel</item>
         <item>Bakery</item>
         <item>Brazilian Restaurant</item>
         <item>Breakfast Spot</item>
         <item>Burger Joint</item>
         <item>Burrito Place</item>
         <item>Cafe</item>
-        <item>Cajun / Creole Restaurants</item>
+        <item>Cajun Restaurants</item>
+        <item>Creole Restaurants</item>
         <item>Caribbean Restaurant</item>
         <item>Chinese Restaurant</item>
-        <item>Coffee Shop</item>
+        <item>Coffee</item>
         <item>Cuban Restaurant</item>
-        <item>Cupcake Shop</item>
-        <item>Delis / Bodegas</item>
-        <item>Dessert Shop</item>
+        <item>Cupcake</item>
+        <item>Delis</item>
+        <item>Bodegas</item>
+        <item>Dessert</item>
         <item>Dim Sum Restaurant</item>
         <item>Diner</item>
         <item>Distillery</item>
-        <item>Donut Shop</item>
+        <item>Donuts</item>
         <item>Dumpling Restaurant</item>
         <item>Eastern European Restaurant</item>
         <item>Ethiopian Restaurant</item>
         <item>Falafel Restaurant</item>
         <item>Fast Food Restaurant</item>
         <item>Filipino Restaurant</item>
-        <item>Fish and Chips Shop</item>
+        <item>Fish and Chips</item>
         <item>Food Truck</item>
         <item>French Restaurant</item>
         <item>Fried Chicken Joint</item>
@@ -92,7 +93,7 @@
         <item>Gluten-free Restaurant</item>
         <item>Greek Restaurant</item>
         <item>Hot Dog Joint</item>
-        <item>Ice Cream Shop</item>
+        <item>Ice Cream</item>
         <item>Indian Restaurant</item>
         <item>Indonesian Restaurant</item>
         <item>Italian Restaurant</item>
@@ -159,7 +160,7 @@
         <item>Emergency Room</item>
         <item>Hospital</item>
         <item>Laboratory</item>
-        <item>Optical Shop</item>
+        <item>Optical</item>
         <item>Veterinarian</item>
         <item>Military Base</item>
         <item>Non-Profits</item>
@@ -253,14 +254,14 @@
         <item>Vineyard</item>
         <item>Volcanos</item>
         <item>Well</item>
-        <item>Antique Shop</item>
+        <item>Antique</item>
         <item>Arts and Crafts Store</item>
-        <item>Automotive Shop</item>
+        <item>Automotive</item>
         <item>Bank</item>
-        <item>Bike Shop</item>
-        <item>Board Shop</item>
+        <item>Bike</item>
+        <item>Board</item>
         <item>Bookstore</item>
-        <item>Bridal Shop</item>
+        <item>Bridal</item>
         <item>Camera Store</item>
         <item>Candy Store</item>
         <item>Car Dealership</item>
@@ -274,7 +275,7 @@
         <item>Shoe Store</item>
         <item>Women’s Store</item>
         <item>Convenience Store</item>
-        <item>Cosmetics Shop</item>
+        <item>Cosmetics</item>
         <item>Credit Unions</item>
         <item>Daycare</item>
         <item>Department Store</item>
@@ -284,23 +285,23 @@
         <item>Electronics Store</item>
         <item>Financial or Legal Services</item>
         <item>Flea Market</item>
-        <item>Flower Shop</item>
-        <item>Food and Drink Shop</item>
+        <item>Flower</item>
+        <item>Food and Drink</item>
         <item>Brewery</item>
         <item>Butcher</item>
-        <item>Cheese Shop</item>
+        <item>Cheese</item>
         <item>Farmers Market</item>
         <item>Fish Market</item>
         <item>Food Court</item>
-        <item>Gourmet Shop</item>
+        <item>Gourmet</item>
         <item>Grocery Store</item>
         <item>Liquor Store</item>
-        <item>Wine Shop</item>
+        <item>Wine</item>
         <item>Furniture / Home Store</item>
         <item>Gaming Cafe</item>
         <item>Garden Center</item>
         <item>Gas Station / Garage</item>
-        <item>Gift Shop</item>
+        <item>Gift</item>
         <item>Gym / Fitness Center</item>
         <item>Climbing Gyms</item>
         <item>Gym Pool</item>
@@ -309,14 +310,14 @@
         <item>Track</item>
         <item>Yoga Studio</item>
         <item>Hardware Store</item>
-        <item>Hobby Shop</item>
+        <item>Hobby</item>
         <item>Internet Cafe</item>
         <item>Jewelry Store</item>
         <item>Laundry Service</item>
         <item>Mall</item>
-        <item>Miscellaneous Shop</item>
-        <item>Mobile Phone Shop</item>
-        <item>Motorcycle Shops</item>
+        <item>Miscellaneous</item>
+        <item>Mobile Phone</item>
+        <item>Motorcycles</item>
         <item>Music Store</item>
         <item>Nail Salon</item>
         <item>Newsstand</item>
@@ -325,14 +326,14 @@
         <item>Pet Store</item>
         <item>Photography Lab</item>
         <item>Real Estate Offices</item>
-        <item>Record Shop</item>
+        <item>Record</item>
         <item>Recycling Facility</item>
         <item>Salon / Barbershop</item>
-        <item>Smoke Shop</item>
+        <item>Smoke</item>
         <item>Spas / Massages</item>
-        <item>Sporting Goods Shop</item>
+        <item>Sporting Goods</item>
         <item>Storage Facility</item>
-        <item>Tailor Shops</item>
+        <item>Tailors</item>
         <item>Tanning Salon</item>
         <item>Tattoo Parlor</item>
         <item>Thrift / Vintage Store</item>

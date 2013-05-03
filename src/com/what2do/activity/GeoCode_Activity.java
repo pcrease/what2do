@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.AsyncTask;
@@ -44,6 +45,7 @@ public class GeoCode_Activity extends FragmentActivity {
 	private GoogleMap mMap;
 	private List<Address> geocodeResults = new ArrayList<Address>();
 	private boolean itemSelected = false;
+	private Marker mMarker;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,23 @@ public class GeoCode_Activity extends FragmentActivity {
 
 		final Button nextButton = (Button) findViewById(R.id.goFromAddressGeocode);
 		nextButton.setVisibility(View.GONE);
+		
+		nextButton.setOnClickListener( new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent (thisActivity,Time_Activity.class);
+				
+				Bundle b=new Bundle();				
+				b.putDouble("lat", mMarker.getPosition().latitude);
+				b.putDouble("long", mMarker.getPosition().longitude);
+				
+				intent.putExtras(b);
+				startActivity(intent);
+			}
+			
+		});
+		
 		mMap = ((SupportMapFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.addressmap)).getMap();
 		mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
@@ -113,6 +132,7 @@ public class GeoCode_Activity extends FragmentActivity {
 						.snippet("Hold finger on the marker and drag to move!"));
 				nextButton.setVisibility(View.VISIBLE);
 				marker.showInfoWindow();
+				mMarker=marker;
 			}
 		});
 

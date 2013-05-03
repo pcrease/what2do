@@ -80,6 +80,11 @@
             android:label="@string/title_activity_geo_code_"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
+        <activity
+            android:name="com.what2do.activity.MapResultsActivity"
+            android:label="@string/title_activity_map_results"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
     </application>
 
 </manifest>

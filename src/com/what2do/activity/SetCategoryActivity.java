@@ -1,12 +1,16 @@
 package com.what2do.activity;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -19,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.what2do.R;
+import com.what2do.foursquare.FourSquare_Category_Data;
 
 public class SetCategoryActivity extends Activity {
 	private Activity thisActivity;
@@ -28,7 +33,10 @@ public class SetCategoryActivity extends Activity {
 	private HashMap<Integer, String> selectedItems = new HashMap<Integer, String>();
 	private static final int NUMBER_OF_SEARCH_TERMS_ALLOWED = 4;
 	private Button addTerm;
+	private Button searchButton;
 	private ListView lv;
+	private ArrayList<String> categoryTypes = new ArrayList<String>();
+	private boolean isKeyWordSearch = true;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +44,7 @@ public class SetCategoryActivity extends Activity {
 		setContentView(R.layout.activity_set_category);
 		thisActivity = this;
 
+				
 		ArrayAdapter<String> myarrayAdapter = new ArrayAdapter<String>(this,
 				R.layout.listview_item_row, getResources().getStringArray(
 						R.array.activityList));
@@ -45,7 +54,7 @@ public class SetCategoryActivity extends Activity {
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> myAdapter, View myView,
 					int myItemInt, long mylng) {
-				
+
 			}
 		});
 
@@ -54,6 +63,8 @@ public class SetCategoryActivity extends Activity {
 
 		final Button Keyword = (Button) findViewById(R.id.Keywordbtn);
 		final Button Activity = (Button) findViewById(R.id.Activitybtn);
+		searchButton = (Button) findViewById(R.id.startSearch);
+
 		Activity.setBackgroundColor(Color.parseColor("#2F6699"));
 
 		Keyword.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +75,7 @@ public class SetCategoryActivity extends Activity {
 						R.style.ButtonTextGreyGlow);
 				Keyword.setBackgroundColor(Color.parseColor("#3fa2d4"));
 				Keyword.setTextAppearance(thisActivity, R.style.ButtonText);
+				isKeyWordSearch = true;
 			}
 		});
 
@@ -75,6 +87,7 @@ public class SetCategoryActivity extends Activity {
 						R.style.ButtonTextGreyGlow);
 				Activity.setBackgroundColor(Color.parseColor("#3fa2d4"));
 				Activity.setTextAppearance(thisActivity, R.style.ButtonText);
+				isKeyWordSearch = false;
 			}
 		});
 
@@ -112,6 +125,30 @@ public class SetCategoryActivity extends Activity {
 			}
 		});
 
+		searchButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(thisActivity,
+						MapResultsActivity.class);
+				
+				Bundle b = new Bundle();
+				b.putDouble("lat", getIntent().getExtras().getDouble("lat"));
+				b.putDouble("long", getIntent().getExtras().getDouble("long"));
+				b.putInt("time", getIntent().getExtras().getInt("time"));
+				b.putString("mode", getIntent().getExtras().getString("mode"));
+
+				if (isKeyWordSearch == true) {
+					b.putStringArrayList("category",
+							 categoryTypes);
+				}
+				
+				intent.putExtras(b);
+				startActivity(intent);
+			}
+
+		});
+
 	}
 
 	@Override
@@ -123,11 +160,14 @@ public class SetCategoryActivity extends Activity {
 
 	private String[] loadCategories(String locale) {
 		String[] returnArray = getResources().getStringArray(
-				R.array.enCategories);
+				R.array.sqrCategoryNames);
 		return returnArray;
 	}
 
 	private void addKeyword(String keyword) {
+
+		categoryTypes.add(keyword);
+
 		final TextView keyText = new TextView(this);
 		keyText.setText(keyword + " (click to remove)");
 		keyText.setBackgroundResource(R.layout.keyword_items);
@@ -137,6 +177,7 @@ public class SetCategoryActivity extends Activity {
 
 		LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(
 				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+
 		llp.setMargins(0, 10, 0, 0); // llp.setMargins(left, top, right,
 										// bottom);
 
@@ -146,12 +187,22 @@ public class SetCategoryActivity extends Activity {
 			public void onClick(View v) {
 				Toast.makeText(thisActivity.getApplicationContext(),
 						"removing", Toast.LENGTH_SHORT).show();
+
+				String stringToRemove = keyText.getText().toString();
+
+				// removes the click to remove text before removing it from the
+				// arraylist
+
+				categoryTypes.remove(stringToRemove.substring(0,
+						stringToRemove.length() - 18));
+
 				selectedItems.remove(keyText.getId());
 				termLayout.removeView(keyText);
 				numberOfTerms -= 1;
+				Log.e("length", "" + categoryTypes.size());
 			}
 		});
-
+		Log.e("length", "" + categoryTypes.size());
 		termLayout.addView(keyText);
 	}
 

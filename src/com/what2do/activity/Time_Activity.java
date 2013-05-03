@@ -26,6 +26,10 @@ public class Time_Activity extends Activity {
 	private TextView timeText;
 	private Integer selectedItem;
 	private Activity timeActivity;
+	private SeekBar timebar;
+	private ListView lv;
+	private ArrayAdapter<String> myarrayAdapter;
+	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -34,7 +38,7 @@ public class Time_Activity extends Activity {
 		
 		timeText = (TextView)findViewById(R.id.timeDescription);
 		
-		SeekBar timebar = (SeekBar) findViewById(R.id.timeBar);
+		timebar = (SeekBar) findViewById(R.id.timeBar);
 		timebar.setMax(115);
 		timebar.setProgress(10);
 		
@@ -61,15 +65,23 @@ public class Time_Activity extends Activity {
 		goToNext.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	Intent intent = new Intent (timeActivity,SetCategoryActivity.class);
+            	
+            	Bundle b=new Bundle();				
+				b.putDouble("lat", getIntent().getExtras().getDouble("lat"));
+				b.putDouble("long",  getIntent().getExtras().getDouble("long"));
+				b.putInt("time", timebar.getProgress()+5);
+				b.putString("mode", myarrayAdapter.getItem(selectedItem));
+				
+				intent.putExtras(b);
             	startActivity(intent);
             }
        });
 		
-		final ListView lv = (ListView) findViewById(R.id.modeList);
+		lv = (ListView) findViewById(R.id.modeList);
 		
 		
 		
-		ArrayAdapter<String> myarrayAdapter = new ArrayAdapter<String>(this, R.layout.listview_item_row, 
+		myarrayAdapter = new ArrayAdapter<String>(this, R.layout.listview_item_row, 
 				getResources().getStringArray(R.array.modeTravelList));
 		lv.setAdapter(myarrayAdapter);
 		
