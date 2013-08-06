@@ -355,7 +355,7 @@ public class MapResultsActivity extends FragmentActivity {
 
 		protected void onPreExecute() {
 			progressDialog = ProgressDialog.show(thisActivity, "Searching....",
-					"Won´t be a minute....", true);
+					"Won't be a minute....", true);
 
 		};
 

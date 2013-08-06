@@ -42,7 +42,7 @@ public class GoogleMapsRoutingFactory {
 		departureTime=System.currentTimeMillis() / 1000l;
 		
 		String url = GOOGLE_HTTP_ADDRESS+"origin="+origin.latitude+","+origin.longitude+"&destination="+destination.latitude+","+destination.longitude
-				+"&sensor=true&mode="+modeOfTransport+"&departure_time="+departureTime;
+				+"&sensor=true&mode="+modeOfTransport;
 		
 		String response=getResponse(url);
 		return response;		
