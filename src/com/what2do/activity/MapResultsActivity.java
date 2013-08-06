@@ -20,12 +20,18 @@ import org.json.JSONException;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -94,6 +100,7 @@ public class MapResultsActivity extends FragmentActivity {
 
 		String category = getIntent().getExtras()
 				.getStringArrayList("category").get(0);
+		
 		int categoryIndex = FourSquare_Category_Data.getNamelist().indexOf(
 				category);
 		String categoryId = FourSquare_Category_Data.getIdlist().get(
@@ -398,5 +405,9 @@ public class MapResultsActivity extends FragmentActivity {
 		}
 
 	}
+	
+	
+	
+	
 
 }
