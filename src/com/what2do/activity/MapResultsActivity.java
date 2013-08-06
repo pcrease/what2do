@@ -55,7 +55,7 @@ public class MapResultsActivity extends FragmentActivity {
 
 	private GoogleMap mMap;
 	private ArrayList<Marker> resultMarkers = new ArrayList<Marker>();
-	private final static String NUMBER_OF_RESULTS = "3";
+	private final static String NUMBER_OF_RESULTS = "10";
 	private Double lat;
 	private Double lon;
 	private Venue_Dataset vd;
